@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="About">
+    <title>About</title>
+    <conbody>
+        <dl>
+            <dlentry id="appName">
+                <dt><b>App</b></dt>
+                <dd>Flow Automation</dd>
+            </dlentry>
+            <dlentry id="productNumber">
+                <dt><b>Product Number</b></dt>
+                <dd>CNA 403 3544</dd>
+            </dlentry>
+            <dlentry id="version">
+                <dt><b>Version</b></dt>
+                <dd>{{version}}</dd>
+            </dlentry>
+            <dlentry id="link">
+                <dt><b>App Link</b></dt>
+                <dd>#flow-automation</dd>
+            </dlentry>
+        </dl>
+    </conbody>
+</concept>

@@ -1,0 +1,89 @@
+<div class="eaFlowInstanceDetails-wEventFilter">
+
+    <div class="eaFlowInstanceDetails-wEventFilter-group">
+        <div class="eaFlowInstanceDetails-wEventFilter-group-div">
+            <label class="ebText eaFlowInstanceDetails-wEventFilter-group-div-label">{{dictionary.events.startTime}}</label>
+        </div>
+        <div class="eaFlowInstanceDetails-wEventFilter-group-div">
+            <div class="eaFlowInstanceDetails-wEventFilter-group-div-startDateTime"></div>
+        </div>
+    </div>
+
+    <div class="eaFlowInstanceDetails-wEventFilter-group">
+        <div class="eaFlowInstanceDetails-wEventFilter-group-div">
+            <label class="ebText eaFlowInstanceDetails-wEventFilter-group-div-label">{{dictionary.events.endTime}}</label>
+        </div>
+        <div class="ebText eaFlowInstanceDetails-wEventFilter-group-div">
+            <div class="ebText eaFlowInstanceDetails-wEventFilter-group-div-endDateTime"></div>
+        </div>
+    </div>
+
+    <div class="eaFlowInstanceDetails-wEventFilter-group">
+        <div class="eaFlowInstanceDetails-wEventFilter-group-div">
+            <label class="ebText eaFlowInstanceDetails-wEventFilter-group-div-label">{{dictionary.events.filter.severity}}</label>
+        </div>
+        <div class="eaFlowInstanceDetails-wEventFilter-group-div">
+            <div class="eaFlowInstanceDetails-wEventFilter-header-severity"></div>
+
+            <div class="ebComponentList-item ebComponentList-item_icon">
+                <label class="ebComponentList-checkboxHolder">
+                    <input class="ebCheckbox" value="INFO" type="checkbox">
+                    <span class="ebCheckbox-inputStatus"></span>
+                    <span class="ebCheckbox-label">{{dictionary.events.severities.info}}</span>
+                </label>
+            </div>
+
+            <div class="ebComponentList-item ebComponentList-item_icon">
+                <label class="ebComponentList-checkboxHolder">
+                    <input class="ebCheckbox" value="WARNING" type="checkbox">
+                    <span class="ebCheckbox-inputStatus"></span>
+                    <span class="ebCheckbox-label">{{dictionary.events.severities.warn}}</span>
+                </label>
+            </div>
+
+            <div class="ebComponentList-item ebComponentList-item_icon">
+                <label class="ebComponentList-checkboxHolder">
+                    <input class="ebCheckbox" value="ERROR" type="checkbox">
+                    <span class="ebCheckbox-inputStatus"></span>
+                    <span class="ebCheckbox-label">{{dictionary.events.severities.error}}</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="eaFlowInstanceDetails-wEventFilter-group">
+        <div class="eaFlowInstanceDetails-wEventFilter-group-div">
+            <label class="ebText eaFlowInstanceDetails-wEventFilter-group-div-label">{{dictionary.events.target}}</label>
+        </div>
+        <div class="eaFlowInstanceDetails-wEventFilter-group-div">
+            <div class="eaFlowInstanceDetails-wEventFilter-group-div-resource">
+                <input type="text" e-id="resourceFilterBox"
+                       class="ebInput ebInput_width_long eaFlowInstanceDetails-wEventFilter-group-div-resource-input"
+                       placeholder="{{dictionary.events.filter.placeholder.resource}}">
+            </div>
+        </div>
+    </div>
+
+    <div class="eaFlowInstanceDetails-wEventFilter-group">
+        <div class="eaFlowInstanceDetails-wEventFilter-group-div">
+            <label class="ebText eaFlowInstanceDetails-wEventFilter-group-div-label">{{dictionary.events.msgSynopsis}}</label>
+        </div>
+        <div class="eaFlowInstanceDetails-wEventFilter-group-div">
+            <div class="eaFlowInstanceDetails-wEventFilter-group-div-message">
+                <input type="text" e-id="messageFilterBox"
+                       class="ebInput ebInput_width_long eaFlowInstanceDetails-wEventFilter-group-div-message-input"
+                       placeholder="{{dictionary.events.filter.placeholder.message}}">
+            </div>
+        </div>
+    </div>
+
+    <div class="eaFlowInstanceDetails-wEventFilter-group">
+        <div class="eaFlowInstanceDetails-wEventFilter-group-div-actions">
+            <div class="eaFlowInstanceDetails-wEventFilter-group-div-actions-apply"></div>
+            <div class="eaFlowInstanceDetails-wEventFilter-group-div-actions-cancel"></div>
+        </div>
+    </div>
+
+</div>
+
+

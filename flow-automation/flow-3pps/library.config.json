@@ -1,0 +1,10 @@
+{
+  "i18n": {
+    "locales": ["en-us"]
+  },
+  "exports": {
+    "flow-3pps/ecabpmn/Bpmn": "flow-3pps/ecabpmn/Bpmn",
+    "flow-3pps/ecabpmn/Renderer": "flow-3pps/ecabpmn/Renderer",
+    "flow-3pps/ecabpmn/Transformer": "flow-3pps/ecabpmn/Transformer"
+    }
+}

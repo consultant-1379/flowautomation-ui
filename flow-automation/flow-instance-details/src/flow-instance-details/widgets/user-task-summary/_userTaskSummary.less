@@ -1,0 +1,149 @@
+.eaFlowInstanceDetails-wUserTaskSummary {
+  &-title-border {
+    overflow: hidden;
+    border-bottom: 1px solid #000000;
+  }
+
+  &-summary-name {
+    border-bottom: none;
+    padding: 0;
+    font-size: 14px;
+  }
+
+  &-status {
+    margin-top: 5px;
+    overflow: hidden;
+    padding: 15px;
+  }
+
+  &-summary-div-principal {
+    float: left;
+    width: 65%;
+  }
+
+  &-summary-div-flow {
+    float: right;
+    text-align: right;
+    width: 25%;
+  }
+
+  &-summary-div-version {
+    float: right;
+    text-align: right;
+    width: 9%;
+    padding-right: 1%;
+  }
+
+  &-summaryData {
+    position: relative;
+    background-color: #f3f3f3;
+    width: 100%;
+    margin: 5px 0;
+
+    &-listItem {
+      height: 60px;
+      min-width: 92px;
+      flex-grow: 1;
+    }
+
+    &-list {
+      padding: 0px 12px;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      list-style-type: none;
+      height: inherit;
+    }
+
+    &-dataDiv {
+      display: flex;
+      display: -webkit-flex;
+      flex-direction: column;
+      padding-left: 15px;
+      justify-content: center;
+      -webkit-justify-content: center;
+      height: 100%;
+    }
+
+    &-dataDiv-stateIcon {
+      width: 15px;
+      height: 15px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 852px) {
+
+  .eaFlowInstanceDetails-wUserTaskSummary {
+    &-status-text {
+      line-height: 20px;
+      font-size: 14px;
+    }
+
+    &-summary-div-principal {
+      float: left;
+      text-align: left;
+      width: 100%;
+    }
+
+    &-summary-div-flow {
+      float: left;
+      text-align: left;
+      width: 100%;
+    }
+
+    &-summary-div-version {
+      float: left;
+      text-align: left;
+      width: 100%;
+    }
+
+    &-summaryData {
+      min-width: 200px;
+      height: auto;
+      margin: 5px 0;
+
+      &-listItem {
+        min-width: initial;
+        height: initial;
+        border-right: none;
+        width: 100%;
+      }
+
+      &-list {
+        height: initial;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: left;
+        justify-content: center;
+        list-style-type: none;
+        position: relative;
+        width: 100%;
+        border-bottom: 2px solid #c3c3c3;
+      }
+
+      &-dataDiv {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: inherit;
+        justify-content: space-between;
+        height: initial;
+        line-height: 20px;
+        font-size: 12px;
+        padding: 0 8px;
+      }
+
+      &-dataDiv-stateIcon {
+        width: 10px;
+        height: 10px;
+        margin-bottom: 2px;
+      }
+    }
+  }
+}

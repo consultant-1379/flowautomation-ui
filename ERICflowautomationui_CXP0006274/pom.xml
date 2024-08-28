@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>flowautomation-ui</artifactId>
+        <groupId>com.ericsson.idun.poc.presentation.client.flowautomation</groupId>
+        <version>1.47.12-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>ERICflowautomationui_CXP0006274</artifactId>
+    <packaging>${rpm.packaging}</packaging>
+    <name>[${project.parent.artifactId}] CXP module</name>
+
+    <properties>
+        <publish_artifact>false</publish_artifact>
+        <media.category>service</media.category>
+        <com.ericsson.oss.rpm.architecture>noarch</com.ericsson.oss.rpm.architecture>
+        <applicationId>flow-automation</applicationId>
+        <!-- Install path = /${rpm-root}/${comp-name}/${install-path} -->
+        <rpm-root>opt</rpm-root>
+        <comp-name>ericsson</comp-name>
+        <install-path>${project.artifactId}</install-path>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>${applicationId}</artifactId>
+            <version>${project.version}</version>
+            <type>tar.gz</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.ericsson.oss.itpf.deployment</groupId>
+                <artifactId>deployment-descriptor-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>configurable-entity</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <configEntity>
+                        <stereotype>WEB_APP</stereotype>
+                        <parameters>
+                            <itemType name="vm-package">
+                                <property name="name" defaultValue="${project.artifactId}" />
+                            </itemType>
+                        </parameters>
+                    </configEntity>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack_tools</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>${applicationId}</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>tar.gz</type>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>${project.build.directory}/dependencies/html</outputDirectory>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>rpm-maven-plugin</artifactId>
+                <configuration>
+                    <group>Applications/System</group>
+                    <mappings combine.self="override">
+                        <mapping>
+                            <!-- Copy application files into httpd VM -->
+                            <directory>/var/www/html</directory>
+                            <filemode>775</filemode>
+                            <username>root</username>
+                            <groupname>root</groupname>
+                            <sources>
+                                <source>
+                                    <location>${project.build.directory}/dependencies/html</location>
+                                    <excludes>
+                                        <exclude>**/cdt.json</exclude>
+                                    </excludes>
+                                </source>
+                            </sources>
+                        </mapping>
+                        <mapping>
+                            <directory>/var/www/html/${applicationId}/metadata/${applicationId}</directory>
+                            <sources>
+                                <source>
+                                    <location>launcher/metadata/${applicationId}</location>
+                                </source>
+                            </sources>
+                        </mapping>
+                        <mapping>
+                            <!-- Unpack the metadata files to local filesystem in httpd VM -->
+                            <directory>/ericsson/httpd/data/apps/${applicationId}</directory>
+                            <filemode>550</filemode>
+                            <username>${jboss-username}</username>
+                            <groupname>${jboss-groupname}</groupname>
+                            <sources>
+                                <source>
+                                    <location>launcher/metadata/${applicationId}</location>
+                                </source>
+                            </sources>
+                        </mapping>
+                    </mappings>
+                    <postinstallScriptlet>
+                        <scriptFile>launcher/scripts/contribute.sh</scriptFile>
+                        <fileEncoding>utf-8</fileEncoding>
+                    </postinstallScriptlet>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

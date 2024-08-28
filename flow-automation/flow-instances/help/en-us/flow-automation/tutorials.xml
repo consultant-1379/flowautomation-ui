@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Faq">
+    <title>Tutorials</title>
+    <conbody>
+        <section>
+            <title>Flow Automation Tutorials</title>
+            <p>
+                <image href="/resources/images/Tutorial.png" alt="Tutorial"/>
+                <xref type="concept" href="tutorials/importFlow.xml" outputclass="landingpage">Import a Flow</xref>
+            </p>
+            <p>
+                <image href="/resources/images/Tutorial.png" alt="Tutorial"/>
+                <xref type="concept" href="tutorials/startFlow.xml" outputclass="landingpage">Start a Flow Instance
+                </xref>
+            </p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="ap-userinterface">
+    <title>User Interface</title>
+    <conbody>
+        <section>
+            <p>
+                <xref href="#instances">Flow Instances Page</xref>
+            </p>
+            <p>
+                <xref href="#flowCatalog">Flow Catalog Page</xref>
+            </p>
+            <p>
+                <xref href="#disableFlow">Enable/Disable Flow</xref>
+            </p>
+            <p>
+                <xref href="#instanceDetails">Flow Instance Details Page</xref>
+            </p>
+            <p>
+                <xref href="#scopingPanel">Scoping Panel</xref>
+            </p>
+
+        </section>
+        <section id="instances">
+            <title>Flow Instances Page</title>
+
+            <p>
+                The <b>Flow Automation</b> user interface main page displays the <b>Flow Instances</b> table.
+                <image href="/resources/images/fa/Flow_Automation.png"/>
+            </p>
+            <p>
+                The table displays the following columns:
+                <ul class="elHelpLib-Concept-ul">
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p"><b>Name</b>: Flow name.
+                        </p>
+                    </li>
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p"><b>Flow</b>: Description of the flow.
+                        </p>
+                    </li>
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p"><b>User-Tasks</b>: The outstanding number of user-tasks.
+                        </p>
+                    </li>
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p"><b>State</b>: Current phase of the flow execution.
+                        </p>
+                    </li>
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p"><b>Summary Report</b>: Live Status of the flow instance
+                            indicating where it is, and what is happening.
+                            It is always based on what the flow designer sets during design time.
+                        </p>
+                    </li>
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p"><b>Start Time</b>: Time at which the flow instance started.
+                        </p>
+                    </li>
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p"><b>End Time</b>: Time at which the flow instance finished.
+                        </p>
+                    </li>
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p"><b>Duration</b>: Duration of flow execution (Optional column, it
+                            must be selected in the <i>Table Settings</i> to be displayed).
+                        </p>
+                    </li>
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p"><b>Started By</b>: Name of user who started the flow.
+                        </p>
+                    </li>
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p"><b>Flow Version</b>: The version of the flow that was in use at
+                            the time the flow instance was
+                            started.
+                        </p>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                By default, only the instances that were started by the current user will be displayed in the table. To
+                display all flow
+                instances for all users, toggle the <b>My Flow Instances</b> button at the top of the table.
+            </p>
+
+            <p>
+                The <b>Summary</b> shows how many flow instances are in the setup, executing, or executed
+                state.
+            </p>
+            <p>
+                <image height="80px" width="80px" href="/resources/images/stopButtonInstancesPage.png"/>
+            </p>
+            <p>
+                The flow instances in Executing Phase can be stopped by clicking the <b>Stop</b> button in the action
+                bar. The <b>Stop</b> button appears in the action bar only when selecting the flow instance which is in
+                the Executing Phase. This feature should be used with caution, as it is not a graceful cancel of the
+                flow instance and causes the executing instance to stop forcibly.
+            </p>
+            <p>
+                <image height="80px" width="80px" href="/resources/images/deleteButtonInstancesPage.png"/>
+            </p>
+            <p>
+                The flow instances in Final State can be deleted by clicking the <b>Delete Instance</b> button in the action
+                bar. The <b>Delete Instance</b> button appears in the action bar only when selecting a flow instance which is in
+                a Final State. This feature should be used with caution, as after deletion of the instance,
+                you won't be able to review the result or troubleshoot the flow further.
+            </p>
+            <p>
+                <image height="80px" width="80px" href="/resources/images/discard-flow.png"/>
+            </p>
+            <p>
+                The flow instances in Setup State can be deleted by clicking the <b>Discard Setup</b> button in the action
+                bar. The <b>Discard Setup</b> button appears in the action bar only when selecting a flow instance which is in
+                a Setup State. This feature should be used with caution, as after discard of the instance,
+                you won't be able to view it or troubleshoot the flow further.
+            </p>
+
+        </section>
+        <section id="flowCatalog">
+            <title>Flow Catalog Page</title>
+            <image href="/resources/images/fa/FlowCatalogHiperlink.png"/>
+            <p>
+                Click <b>View Flow Catalog</b> hyperlink from the Flow Automation page to navigate to the flow catalog
+                page.
+            </p>
+            <image href="/resources/images/fa/Flow_Catalog.png"/>
+            <p>
+                The flows table displays a list of all imported flows with the following columns:
+                <ul class="elHelpLib-Concept-ul">
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p"><b>Name</b>: Flow name.
+                        </p>
+                    </li>
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p"><b>Description</b>: Description of the flow.
+                        </p>
+                    </li>
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p"><b>Version</b>: Flow version.
+                        </p>
+                    </li>
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p"><b>Imported By</b>: Name of the user who imported the flow.
+                        </p>
+                    </li>
+                </ul>
+                When a flow is selected, the <b>Documentation Summary</b> details are displayed in the right panel.
+            </p>
+            <image href="/resources/images/fa/FlowCatalogDocumentation.png"/>
+            <p>
+                <b>Note:</b>
+                When a new version of an existing flow is imported, the flow is updated to the new version. Flow
+                versions are
+                in the format: XX.YY.ZZ. The imported flow version must be a higher version than the existing flow
+                version or an error
+                is displayed. Instances already running with any previous versions of the flow will continue to execute.
+                Subsequent flow instances started will be with the new version.
+            </p>
+        </section>
+        <section id="disableFlow">
+            <title>Disable/Enable a Flow</title>
+
+            <p>
+                When a flow is imported, it is automatically enabled.
+                Refer to <xref type="concept" href="/tutorials/importFlow.xml#1">Import a Flow</xref> for details on how
+                to import a flow.
+            </p>
+
+            <p>
+                When an imported flow is selected, you can choose to <b>Enable</b> or <b>Disable</b> that particular
+                flow.
+            </p>
+
+            <p>
+                Click <b>Enable</b> to enable a flow. This allows new flow instances to start.
+            </p>
+
+            <p>
+                Click <b>Disable</b> to disable a flow. New flow instances cannot be started when a flow is disabled.
+            </p>
+        </section>
+        <section id="instanceDetails">
+            <title>Flow Instance Details Page</title>
+            <p>
+                The <b>Flow Instance Details</b> page displays the
+                <b>Flow Instance Summary Panel.</b>
+                <image href="/resources/images/fa/Flow_Instance_Details.png"/>
+            </p>
+            <p>
+                This panel displays the following:
+                <ul class="elHelpLib-Concept-ul">
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p">
+                            <b>State:</b>
+                            The following states are supported: <b>Setup</b>, <b>Executing</b> and
+                            <b>Executed</b>
+                        </p>
+                    </li>
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p">
+                            <b>Start Time:</b>
+                            Time the flow instance started
+                        </p>
+                    </li>
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p">
+                            <b>End Time:</b>
+                            Time the flow instance finished
+                        </p>
+                    </li>
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p">
+                            <b>Started By:</b>
+                            Name of user who started the instance
+                        </p>
+                    </li>
+                    <li class="elHelpLib-Concept-li">
+                        <p class="elHelpLib-Concept-p">
+                            <b>Summary Report:</b>
+                            Live Status of the flow instance indicating where it is, and what is happening. It is always
+                            based on what the flow designer sets during design time.
+                        </p>
+                    </li>
+
+                </ul>
+            </p>
+
+            <u>
+                <b>Report Tab</b>
+            </u>
+            <p>
+                <image href="/resources/images/ReportTab.png"/>
+            </p>
+            <p>
+                The <b>Report</b> tab contains two different views:
+            </p>
+            <p>
+                <image href="/resources/images/ReportTabButtons.png"/>
+            </p>
+            <p>
+                <b>Execution</b>
+                - This displays the details of executing and executed flow instances.
+            </p>
+            <p>
+                <b>Setup</b>
+                - This displays the data that was entered during the Setup Phase.
+            </p>
+            <p>
+                <b>Note:</b>
+                The Report tab is not displayed when the flow instance is in the Setup Phase.
+            </p>
+            <p>
+                The execution view is selected by default and the views can be alternated through use of the
+                corresponding buttons shown on the Report tab
+            </p>
+            <p>
+                The execution content is defined in the flow during flow design. This determines what is displayed in
+                the
+                execution view of the Report tab.
+                If a report is not defined for a flow, no report details are displayed.
+            </p>
+            <p>
+                <b>Report Table</b>
+            </p>
+            <p>
+                The <b>Report</b> table is shown in the execution view and shows the report results in tabular format.
+                The report table can be sorted and filtered.
+            </p>
+            <p>
+                <image href="/resources/images/report_table.png"/>
+            </p>
+            <p>
+                The <b>Report</b> provides an action framework. When the action framework is activated,
+                it is possible to select table rows, as in the image below.
+            </p>
+            <p>
+                <image href="/resources/images/action-framework/selected2rows.jpg"/>
+            </p>
+            <p>
+                <b>Filtering Report Table</b>
+            </p>
+            <p>
+                Filtering can be based on individual columns, or on all the columns.
+                By default the filtering displays all columns. So whatever text typed is searched in
+                all the columns of the table.
+                User can also select individual columns if they want to filter on a specific column.
+            </p>
+            <p>
+                When the action framework is activated and rows are selected,
+                if the data is filtered then the selected rows will be cleared. This can be seen in the image below.
+            </p>
+            <p>
+                <image href="/resources/images/action-framework/filterWillUnselectRow.jpg"/>
+            </p>
+            <p>
+                <b>Setup Data</b>
+            </p>
+            <p>
+                Click the <b>Setup</b> button to display the data selected during the Setup Phase.
+            </p>
+            <p>
+                <image href="/resources/images/SampleSetupData.png"/>
+            </p>
+            <p>
+                The Setup Configuration can be exported in a file using the <b>Export</b> button.
+            </p>
+            <p>
+                <image href="/resources/images/exportSetupConfig.png"/>
+            </p>
+            <p>
+                This file can be used to instantiate the same flow with the same configuration by selecting the file input option during the Choose Setup user-task.
+            </p>
+            <p>
+                The Setup Configuration is only available for flows which have a Setup Phase and can only be exported from the Review and Confirm stage and onwards.
+                The other exportable option is the execution Report and is only available from the Execution Phase and onwards.
+            </p>
+
+            <u>
+                <b>User-Tasks Tab</b>
+            </u>
+            <p>
+                <image href="/resources/images/UserTasksTab.png"/>
+            </p>
+            <p>The <b>User-Tasks</b> tab contains details of user-tasks required to execute an instance.
+            </p>
+            <p>The left panel displays a list of flow instance user-tasks. The right panel displays a user-task form.
+            </p>
+            <p>User-tasks are displayed differently in the Setup Phase and Execution Phase.</p>
+            <p>In the Setup Phase tasks are displayed and must be completed in sequential order.</p>
+            <p>
+                <image href="/resources/images/setupusertask.png"/>
+            </p>
+            <p>The final task in the Setup Phase is the <b>Review and Confirm Execute</b> task.
+                This task allows you to review all the data input before executing the flow instance.
+            </p>
+            <p>The following buttons are displayed for the Setup Phase:</p>
+            <ul class="elHelpLib-Concept-ul">
+                <li class="elHelpLib-Concept-li">
+                    <p class="elHelpLib-Concept-p">
+                        <b>Continue:</b>
+                        Completes the current user-task and brings you to the next task.
+                        This button is not available for the <b>Review and Confirm Execute</b> task.
+                    </p>
+                    <p>The button will be disabled when there is a scroll bar on the user-task and will only enable once the user scrolls to the bottom and the whole user-task content has been viewed.</p>
+                </li>
+                <li class="elHelpLib-Concept-li">
+                    <p class="elHelpLib-Concept-p">
+                        <b>Execute:</b>
+                        Executes the user-tasks. This button is only available in the <b>Review and Confirm Execute</b> task.
+                    </p>
+                </li>
+                <li class="elHelpLib-Concept-li">
+                    <p class="elHelpLib-Concept-p">
+                        <b>Discard Setup:</b>
+                        Discards the setup of the flow instance.
+                    </p>
+                </li>
+                <li class="elHelpLib-Concept-li">
+                    <p class="elHelpLib-Concept-p">
+                        <b>Restart:</b>
+                        Discards currently running flow instance execution, and restarts a new instance.
+                    </p>
+                </li>
+            </ul>
+            <p>When selecting the <b>Execute</b> button the Confirm Execution dialog box will open.
+                From here, the execution of the flow can either be confirmed by again selecting <b>Execute</b>
+                or cancelled by selecting the <b>Cancel</b> button.
+            </p>
+            <p>
+                <image href="/resources/images/confirmExecution.png"/>
+            </p>
+            <p>In the Execution Phase, user-tasks can be completed in any order.</p>
+            <p>In case of a multi-instance flow, when there are grouped user-tasks, they are displayed grouped by their names in separate accordions.</p>
+            <p>
+                <image href="/resources/images/groupedUsertasks.png"/>
+            </p>
+            <p>The <b>Submit</b> button is displayed for the Execution Phase. This button completes the current user
+                task.
+            </p>
+            <p>In the case of a multi instance flow, if there is more than one user-task in a group, the user has the option to select the
+                <b>Submit to multiple tasks</b> button for completion simultaneously.Selecting this will open the Submit to Multiple tasks dialog box.</p>
+            <p>
+                <image href="/resources/images/submitMultipleUsertasks.png"/>
+            </p>
+            <p>
+                In this dialog box, either individual instances can be selected or the <b>Select All</b> button can be used to select all instances.
+                All selected instances can also be cleared by using the <b>Select None</b> button.
+            </p>
+            <p>
+                Once selected, instances can be submitted via the <b>Submit</b> button or the the <b>Cancel</b> button can be selected to close the dialog box.
+            </p>
+            <u>
+                <b>Process Diagram Tab</b>
+            </u>
+            <p>
+                <image href="/resources/images/ProcessDiagramTab.png"/>
+            </p>
+            <p>
+                The <b>Process Diagram</b> tab contains two different views.
+            </p>
+            <p>
+                <image href="/resources/images/ProcessDiagramButton.png"/>
+            </p>
+            <p>
+                <b>Definition:</b>
+                - This displays the flow diagram details.
+                <fig>
+                    <title></title>
+                    <image href="resources/images/DefinitionDiagram.png"/>
+                </fig>
+            </p>
+            <p>
+                <b>Activity:</b>
+                - This dynamically displays the executed path of the different phases of the flow.
+                <fig>
+                    <title></title>
+                    <image href="resources/images/ActivityDiagram.png"/>
+                </fig>
+            </p>
+
+            <u>
+                <b>Events Tab</b>
+            </u>
+            <p>
+                The <b>Events tab</b> displays events that are logged during the execution of the flow instance -
+            </p>
+            <p>
+                <image href="resources/images/eventsTab.png"/>
+            </p>
+            <p>
+                Events can be filtered using the start time, end time and/or through the use of the severity buttons which are displayed as icons for either Error, Warning or Info.
+                The data may also be refreshed at any time by clicking the <b>Refresh Button</b>.
+                This will also clear all currently applied filters.
+            </p>
+            <p>
+                When an event is clicked it displays details of that event in the right panel
+            </p>
+            <p>
+                <image href="resources/images/eventDetails.png"/>
+            </p>
+            <p>
+                When the <b>Filter Button</b> is clicked it displays all the available filters in the right fly-out panel.
+            </p>
+            <p>
+                <image href="resources/images/filterButton.png"/>
+            </p>
+            <p>
+                From this panel, the same Date/time and Severity filters are available as well as two other filters that
+                operate on the Resource and Message Synopsis columns of the Events Table.
+            </p>
+            <p>
+                <image href="resources/images/eventsFilterFlyout.png"/>
+            </p>
+            <u>
+                <b>Topology Selection</b>
+            </u>
+            <p>During the Setup Phase, some flow instances may require Topology selection.
+            </p>
+            <p>Click <b>Add Topology Data</b> to select the required objects from the <b>Add Network
+                Objects
+            </b> scoping panel.
+            </p>
+            <p>Nodes and Collections can be selected from the scoping panel, and the selected objects are displayed in
+                table format.
+            </p>
+            <p>The <b>Node Name</b>, <b>NeType</b>, and the <b>Collection Name</b> are displayed for the selected nodes.
+            </p>
+            <p>
+                <image href="/resources/images/nodeSelectedTable.png"/>
+            </p>
+
+            <p>Click the delete icon
+                <image href="resources/images/deleteIcon.png" alt="delete Icon"/>
+                to delete a selected object
+            </p>
+        </section>
+        <section id="scopingPanel">
+            <title>Scoping Panel</title>
+            <p>The <b>Scoping Panel</b> is used to select network objects during the user-task Setup Phase for flow
+                instances that require topology selection.
+            </p>
+            <image href="/resources/images/scopingPanel.png"/>
+            <p>Click <b>Add Topology Data</b> in the <b>User-Task</b> tab, on the <b>Instance Details</b> page, to
+                access the <b>Scoping Panel</b>.
+            </p>
+            <p>Click <b>Add Topology Data</b> to display/hide the <b>Scoping Panel</b>.
+            </p>
+            <p>The <b>Scoping Panel</b> is displayed on the right of the UI with the <b>Add Network Objects</b> heading.
+            </p>
+            <p>The <b>Scoping Panel</b> contains the following tabs:
+            </p>
+            <ul>
+                <li>
+                    <u>Topology</u>
+                    - This allows nodes and subnetworks to be selected directly from the network topology.
+                </li>
+                <li>
+                    <u>Search</u>
+                    - This allows nodes and subnetworks to be selected directly from the network topology.
+                </li>
+                <li>
+                    <u>Collections</u>
+                    - This allows network objects to be selected via existing collections.
+                </li>
+                <li>
+                    <u>Saved Searches</u>
+                    - This allows network objects to be selected via existing saved searches.
+                </li>
+            </ul>
+
+            <p>Note the following <b>Scoping Panel</b> behaviours:
+            </p>
+            <ul>
+                <li>
+                    Items selected in the <b>Scoping Panel</b> tabs are retained when navigating between the tabs.
+                </li>
+                <li>
+                    The <b>Topology</b> tab only displays supported nodes. This tab may be empty if it contains
+                    no supported nodes.
+                </li>
+                <li>
+                    Subnetworks are always displayed in the <b>Topology</b> tab.
+                </li>
+                <li>
+                    Selecting a subnetwork in the <b>Topology</b> tab displays the subnetwork.
+                    It <b>will not</b> display the nodes beneath it or the nested subnetwork nodes contained in the
+                    subnetwork.
+                    Nested subnetworks must be selected to view the nodes they contain.
+                </li>
+                <li>
+                    Selecting the <b>Add</b> button in a <b>Scoping Panel</b> tab, adds the selected objects
+                    to the Flow Instance and closes the <b>Scoping Panel</b>.
+                </li>
+            </ul>
+
+            <sectiondiv id="Topology">
+                <p>
+                    <b>
+                        <u>Topology Tab</u>
+                    </b>
+                </p>
+                <p>
+                    The <b>Topology</b> tab is the default tab.
+                    <fig>
+                        <title></title>
+                        <image href="resources/images/topologyTab.png"/>
+                    </fig>
+                </p>
+                <p>
+                    The <b>Topology</b> tab contains the <b>Subnetworks</b> and the <b>All other nodes</b> items. Nodes
+                    are found
+                    under the <b>All other nodes</b> item unless they are added beneath a Subnetwork.
+                </p>
+                <p>Subnetworks are displayed by the globe icon
+                    <image href="resources/images/globe.png"/>
+                </p>
+                <p>Nodes are displayed by the base station icon
+                    <image href="resources/images/baseStation.png"/>
+                </p>
+                <p>
+                    <b>All other nodes</b>
+                    are displayed by the folder icon
+                    <image href="resources/images/folder.png"/>
+                </p>
+                <p>Synched nodes are displayed by the following icon
+                    <image href="resources/images/synched.png"/>
+                </p>
+                <p>Unsynched nodes are displayed by the following icon
+                    <image href="resources/images/unsynched.png"/>
+                </p>
+            </sectiondiv>
+            <sectiondiv id="Search">
+                <p>
+                    <b>
+                        <u>Search Tab</u>
+                    </b>
+                </p>
+                <p>
+                    The <b>Search</b> tab allows you to search for nodes based on supported managed object names, node
+                    names, collection names, and saved search names.
+                    Select the desired node(s) and click <b>Add</b> to add the node(s) in the <b>Ungrouped objects</b> table.
+                    <fig>
+                        <title></title>
+                        <image href="resources/images/searchTab.png"/>
+                    </fig>
+                </p>
+                <p>The following managed object types are supported:</p>
+                <ul>
+                    <li>
+                        NetworkElement
+                    </li>
+                    <li>
+                        SubNetwork
+                    </li>
+                    <li>
+                        ManagedElement
+                    </li>
+                    <li>
+                        MeContext
+                    </li>
+                </ul>
+            </sectiondiv>
+            <sectiondiv id="Collections">
+                <p>
+                    <b>
+                        <u>Collections Tab</u>
+                    </b>
+                </p>
+                <p>
+                    The
+                    <b>Collection</b>
+                    tab allows you to select required Collection.
+                    <fig>
+                        <title></title>
+                        <image href="resources/images/collectionsTab.png"/>
+                    </fig>
+                </p>
+                <p>The collections displayed can be filtered by:</p>
+                <ul>
+                    <li>
+                        <b>Name</b>
+                    </li>
+                    <li>
+                        <b>Visibility</b>
+                        (Public, Private, or All)
+                    </li>
+                    <li>
+                        <b>Favorites</b>
+                    </li>
+                </ul>
+            </sectiondiv>
+            <sectiondiv id="SavedSearches">
+                <p>
+                    <b>
+                        <u>Saved Searches Tab</u>
+                    </b>
+                </p>
+                <p>
+                    The
+                    <b>Saved Searches</b>
+                    tab allows you to select required Saved Seaches.
+                    <fig>
+                        <title></title>
+                        <image href="resources/images/savedSearchesTab.png"/>
+                    </fig>
+                </p>
+                <p>The Saved Searches displayed can be filtered by:</p>
+                <ul>
+                    <li>
+                        <b>Name</b>
+                    </li>
+                    <li>
+                        <b>Visibility</b>
+                        (Public, Private, or All)
+                    </li>
+                    <li>
+                        <b>Favorites</b>
+                    </li>
+                </ul>
+                <p>
+                    <b>Note:</b>
+                    If the search contains a large number of results, the
+                    application might become unresponsive. Try to refine your search before adding nodes.
+                </p>
+                <p>
+                    <b>Note: </b>
+                    Regardless of the number of nodes in a collection. FA will only display the first 250. This is also noted on the UI as displayed below.
+                    <fig>
+                        <title></title>
+                        <image href="resources/images/collectionLimit.png"/>
+                    </fig>
+                </p>
+            </sectiondiv>
+        </section>
+    </conbody>
+</concept>

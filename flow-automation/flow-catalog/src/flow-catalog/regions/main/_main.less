@@ -1,0 +1,122 @@
+.eaFlowCatalog-rMain {
+  position: relative;
+  height: 100%;
+
+  &-titleAndFilters {
+    position: relative;
+    padding-bottom: 5px;
+
+    &_hidden {
+      display: none;
+    }
+
+    &-title {
+      padding: 5px 0 5px 0;
+      float: left;
+      display: inline;
+      margin-top: 6px;
+
+      &-resourceLabel {
+        display: inline;
+        border-bottom: none;
+      }
+
+      &-flows {
+        &-count {
+          display: inline;
+          font-size: 12px;
+
+          &:after {
+            content: ")"
+          }
+
+          &:before {
+            content: "("
+          }
+        }
+      }
+
+      &-separator {
+        border-left: 1px solid #ccc;
+        margin-left: 6px;
+        margin-right: 10px;
+        height: 2.4rem;
+      }
+
+      &-selected {
+        display: inline;
+
+        &_hidden {
+          display: none;
+        }
+
+        &-label {
+          display: inline;
+          font-size: 12px;
+        }
+
+        &-count {
+          display: inline;
+          font-size: 12px;
+
+          &:after {
+            content: ")"
+          }
+
+          &:before {
+            content: "("
+          }
+        }
+
+        &-clearSelection {
+          display: inline;
+
+          &_hidden {
+            display: none;
+          }
+
+          &-link {
+            cursor: pointer;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    &-filters {
+      display: inline-block;
+      font-size: 12px;
+      float: right;
+      padding-top: 5px;
+    }
+
+    &-tableSettings {
+      display: inline-block;
+      float: right;
+      padding-top: 5px;
+      padding-left: 5px;
+    }
+  }
+
+  &-flowList {
+    padding-bottom: 5px;
+    overflow-y: hidden;
+    width: 100%;
+    height: calc(100% - 16px);
+
+    &_hidden {
+      display: none;
+    }
+
+    @media screen and (max-width: 480px) and (min-width: 330px) {
+      &_tableFlows {
+        margin-top: 70px;
+      }
+    }
+    @media screen and (max-width: 329px) and (min-width: 50px) {
+      &_tableFlows {
+        margin-top: 95px;
+      }
+    }
+  }
+}

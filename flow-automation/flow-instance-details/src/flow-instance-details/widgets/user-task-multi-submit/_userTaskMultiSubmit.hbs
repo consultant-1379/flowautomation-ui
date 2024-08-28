@@ -1,0 +1,46 @@
+<div class="eaFlowInstanceDetails-wUserTaskMultiSubmit">
+    <h1 class="eaFlowInstanceDetails-wUserTaskMultiSubmit-header">{{dictionary.userTask.multiSubmit.header}}</h1>
+
+    <!-- Top section with header, summary and buttons -->
+    <div class="eaFlowInstanceDetails-wUserTaskMultiSubmit-top">
+        <p class="eaFlowInstanceDetails-wUserTaskMultiSubmit-top-message">{{dictionary.userTask.multiSubmit.headerMessage}}</p>
+        <div class="eaFlowInstanceDetails-wUserTaskMultiSubmit-top-selection">
+
+            <!--summary on left-->
+            <div class="eaFlowInstanceDetails-wUserTaskMultiSubmit-top-selection-summary">
+                <div class="eaFlowInstanceDetails-wUserTaskMultiSubmit-top-selection-summary-usertasks">
+                    <div class="eaFlowInstanceDetails-wUserTaskMultiSubmit-top-selection-summary-usertasks-title">
+                        <h2 class="eaFlowInstanceDetails-wUserTaskMultiSubmit-top-selection-summary-usertasks-title-text"></h2>
+                    </div>
+                    <p class="eaFlowInstanceDetails-wUserTaskMultiSubmit-top-selection-summary-usertasks-count"></p>
+                </div>
+
+                <div class="eaFlowInstanceDetails-wUserTaskMultiSubmit-top-selection-summary-hyphen">-</div>
+
+                <div class="eaFlowInstanceDetails-wUserTaskMultiSubmit-top-selection-summary-selected">
+                    <p class="eaFlowInstanceDetails-wUserTaskMultiSubmit-top-selection-summary-selected-title">{{ dictionary.userTask.multiSubmit.selectedUserTasks}}</p>
+                    <p class="eaFlowInstanceDetails-wUserTaskMultiSubmit-top-selection-summary-selected-count">0</p>
+                </div>
+            </div>
+
+            <!--buttons on right-->
+            <div class="eaFlowInstanceDetails-wUserTaskMultiSubmit-top-selection-buttons">
+                <div class="eaFlowInstanceDetails-wUserTaskMultiSubmit-top-selection-buttons-selectAll"></div>
+                <div class="eaFlowInstanceDetails-wUserTaskMultiSubmit-top-selection-buttons-selectNone"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Table of usertasks -->
+    <div class="eaFlowInstanceDetails-wUserTaskMultiSubmit-usertasks"></div>
+
+    <!--Footer information -->
+    <div class="eaFlowInstanceDetails-wUserTaskMultiSubmit-information">
+        <p class="eaFlowInstanceDetails-wUserTaskMultiSubmit-information-message">
+            <span class="eaFlowInstanceDetails-wUserTaskMultiSubmit-information-message-note">{{dictionary.userTask.multiSubmit.footer.note}}
+                :</span>
+            <span class="eaFlowInstanceDetails-wUserTaskMultiSubmit-information-message-string">{{dictionary.userTask.multiSubmit.footer.message}}</span>
+        </p>
+    </div>
+
+</div>

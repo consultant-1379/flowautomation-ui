@@ -1,0 +1,135 @@
+<task id="StartFlow-MyTask">
+    <title>Start a Flow Instance</title>
+    <taskbody>
+        <prereq>
+            <ul>
+                <li>You must have the Flowautomation_Administrator role.</li>
+                <li>Some flows may be designed to disallow a user without the required permissions from executing or
+                    starting a flow instance of that flow. In this case, the start flow instance button would be
+                    disabled for that user.
+                </li>
+                <li>A flow package must be imported before the flow instance can be started.</li>
+            </ul>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>This tutorial describes the steps required to start a flow instance.</p>
+
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+                <li>
+                    <xref href="#1">Select Required Flow</xref>
+                </li>
+                <li>
+                    <xref href="#2">Enable Required Flow (optional)</xref>
+                </li>
+                <li>
+                    <xref href="#3">Start Instance</xref>
+                </li>
+                <li>
+                    <xref href="#4a">Flow With Setup Phase</xref>
+                </li>
+                <li>
+                    <xref href="#4b">Flow Without Setup Phase</xref>
+                </li>
+            </ol>
+        </context>
+        <steps>
+            <step id="1">
+                <cmd>Select Required Flow</cmd>
+                <info>
+                    <ol>
+                        <li>Launch
+                            <xref type="concept" href="#flow-automation/flowcatalog" scope="external">Flow Catalog
+                            </xref>
+                        </li>
+                        <li>Select required flow from the <b>Imported Flows</b> table.
+                        </li>
+                    </ol>
+                </info>
+            </step>
+            <step id="2">
+                <cmd>Enable Required Flow (optional)</cmd>
+                <info>Click <b>Enable</b> if the flow is disabled. The start button will be disabled if the flow is
+                    disabled.
+                </info>
+            </step>
+            <step id="3">
+                <cmd>Start Instance</cmd>
+                <info>
+                    <ol>
+                        <li>
+                            Click
+                            <b>Start</b>.
+                        </li>
+                        <li>
+                            Enter unique <b>Name</b>.
+                        </li>
+                    </ol>
+                </info>
+            </step>
+            <step id="4a">
+                <cmd>If the Flow has a Setup Phase</cmd>
+                <info>
+                    <ol>
+                        <li>
+                            Click
+                            <b>Continue</b>
+                        </li>
+                        <li>
+                            You are navigated to the Flow Instance Details page
+                        </li>
+                        <li>
+                            Complete Setup Phase tasks. Clicking <b>Continue</b> when ready to move on from each one
+                        </li>
+                        <li>
+                            Click <b>Execute</b> on the Review and Confirm Phase
+                        </li>
+                        <li>
+                            Confirm execution by again clicking
+                            <b>Execute</b>
+                        </li>
+                        <li>
+                            Complete User Tasks if necessary. Clicking <b>Submit</b> to submit choices
+                        </li>
+                        <li>
+                            The <b>Report</b> and <b>Process Diagram</b> tabs can be clicked on to view their contents.
+                        </li>
+                    </ol>
+                </info>
+            </step>
+            <step id="4b">
+                <cmd>If the Flow has no Setup Phase</cmd>
+                <info>
+                    <ol>
+                        <li>
+                            Click
+                            <b>Execute</b>
+                        </li>
+                        <li>
+                            Confirm execution by again clicking
+                            <b>Execute</b>
+                        </li>
+                        <li>
+                            You are navigated to the Flow Instance Details page
+                        </li>
+                        <li>
+                            Complete User Tasks if necessary. Clicking <b>Submit</b> to submit choices
+                        </li>
+                        <li>
+                            The <b>Report</b> and <b>Process Diagram</b> tabs can be clicked on to view their contents.
+                        </li>
+                    </ol>
+                </info>
+            </step>
+        </steps>
+        <result>
+            <p>The new flow instance is displayed in the <b>Flow Instances</b> table.
+            </p>
+        </result>
+    </taskbody>
+</task>

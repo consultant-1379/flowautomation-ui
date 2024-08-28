@@ -1,0 +1,51 @@
+{
+    "parent": "$(parentJson)/app.json",
+    "defaultPhase": "package",
+    "properties": {
+        "package": "flow-catalog",
+        "name": "FlowCatalog",
+        "version": "1.0.0",
+        "skeleton": "2.3.1",
+        "skeletonType": "app"
+    },
+    "phases": {
+        "package": {
+            "depends": [
+                "clean",
+                "analyze",
+                "test",
+                "compile",
+                "compress"
+            ]
+        }
+    },
+    "dependencies": {
+        "chartlib": "1.7.2",
+        "jscore": "2.0.4",
+        "container": "1.16.1",
+        "contextmenu": "0.1.16",
+        "widgets": "1.10.2",
+        "flyout": "0.2.3",
+        "formvalidator": "0.3.1",
+        "helpsdk": "2.12.2",
+        "layouts": "1.9.1",
+        "logger": "0.3.1",
+        "mapping": "1.0.4",
+        "navigation": "1.1.1",
+        "router": "1.0.3",
+        "systemtime": "0.0.12",
+        "tablelib": "0.12.2",
+        "terminal": "1.1.1",
+        "uit": "1.0.1",
+        "webpush": "0.3.3",
+        "i18n": "3.0.4",
+        "assets": "1.11.3",
+        "collection-management-lib": "1.12.1",
+        "dataviz": "0.3.0",
+        "clientsdk": "1.75.1",
+        "networkobjectlib": "1.107.1",
+        "grammarparsinglibrary": "1.81.11",
+        "networkexplorerlib": "1.81.11",
+        "applib": "1.43.16"
+    }
+}

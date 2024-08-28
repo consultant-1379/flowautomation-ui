@@ -1,0 +1,82 @@
+.elFlowAutomationLib-wProcessDefinitionDiagram-diagram {
+
+    &-section_hidden {
+      display: none;
+    }
+
+    &-errorsection_hidden {
+      display: none;
+    }
+
+    &-breadcrumb {
+        font-size: 1.6rem;
+        color:#808080;
+        padding: 1.2rem 0 0.7rem 0;
+        margin: 0 0 0.4rem 0;
+    }
+        
+    &-breadcrumb-current {
+        font-size: 1.6rem;
+        color:#000000;
+        padding: 1.2rem 0 0.7rem 0;
+        margin: 0 0 0.4rem 0;
+    }
+    
+//  -------------------------------------------------------------------------------------------------        
+//  ------------- Start of section identical in ProcessDefinitionDiagram and ProcessActivityDiagram
+    &-toolbarAndDiagram {
+        font-size: 0;
+    }
+    
+    &-toolbar {
+        display:inline-block;
+        width: 16px;
+        vertical-align: top;
+        background-color: #e8e8e8;
+        border-radius: 2px;
+        padding: 4px;
+    }
+
+    &-infoControls {
+        opacity: 1.0;
+        cursor: pointer;
+        z-index: 4000;
+        padding-bottom: 4px;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #cccccc;
+        margin-bottom: 4px;
+    }
+
+    &-zoomControls {
+        opacity: 1.0;
+        cursor: pointer;
+        z-index: 2000;
+    }
+    
+    &-diagramContent {
+        display:inline-block;
+        width: calc(~'100% - 30px');
+        overflow: hidden;
+        z-index: 1;
+        background-color: #f8f8f8;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #e8e8e8;
+    }
+
+    &-draggableContent {
+        cursor: default;
+    }
+//  ------------- End of section identical in ProcessDefinitionDiagram and ProcessActivityDiagram
+//  -----------------------------------------------------------------------------------------------        
+
+    &-highlight-Selectable  {
+      -webkit-box-shadow: 0px 0px 6px 6px rgba(0, 0, 255, 1); /* WebKit */
+      -moz-box-shadow: 0px 0px 6px 6px rgba(0, 0, 255, 1); /* Firefox */
+      box-shadow: 0px 0px 6px 6px rgb(0, 0, 255); /* Standard */
+      border-radius: 5px;
+      border-collapse: separate;
+      cursor: pointer;
+    }
+}

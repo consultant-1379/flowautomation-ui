@@ -1,0 +1,52 @@
+.eaFlowInstanceDetails-wPopupTable {
+  &-container {
+    width: 100%;
+    overflow-y: auto;
+
+    &-topPanel {
+      padding: 10px 5px 5px 0px;
+
+      &-header {
+        float: left;
+        border-bottom: none;
+        padding-right: 5px;
+
+        &-text {
+          display: inline;
+          border-bottom: none;
+        }
+      }
+
+      &-filter {
+        float: right;
+      }
+
+      &-clear {
+        clear: both;
+      }
+    }
+
+    &-header {
+      padding-top: 10px;
+      border-top: solid 1px black;
+      text-align: right;
+    }
+
+    &-table {
+      //FIXME Do the maths to calculate it based on number of columns
+      overflow: auto;
+      padding-bottom: 30px;
+      max-height: 400px;
+      overflow-y: auto;
+      padding-right: 5px;
+    }
+  }
+
+  &-error {
+    display: none;
+
+    &-text {
+        display: inline-block;
+      }
+  }
+}

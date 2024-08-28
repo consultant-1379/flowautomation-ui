@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.ericsson.idun.poc.presentation.client.flowautomation</groupId>
+        <artifactId>flowautomation-testsuite</artifactId>
+        <version>1.47.12-SNAPSHOT</version>
+        <relativePath>..</relativePath>
+    </parent>
+
+    <artifactId>flowautomation-testsuite-usat</artifactId>
+    <name>[${project.parent.artifactId}] USAT Project</name>
+
+    <profiles>
+        <profile>
+            <id>usat</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <!-- Profile to execute integration tests in Chrome in headless mode -->
+        <profile>
+            <id>usat_headless</id>
+            <properties>
+                <argLine>
+                    -Darq.extension.webdriver.chromeArguments=${browser.chrome.config}
+                </argLine>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <!-- Profile to execute integration tests in Chrome Browser on Jenkins -->
+        <profile>
+            <id>chrome_jenkins</id>
+            <properties>
+                <argLine>
+                    -Darq.extension.webdriver.chromeArguments=${browser.chrome.config}
+                    -Darq.extension.webdriver.chromeBinary=${browser.chrome.path}
+                </argLine>
+            </properties>
+        </profile>
+
+        <!-- Profile to start and kill cdt2-serve before and after tests execution respectively, which is required only in Jenkins -->
+        <profile>
+            <id>tests_setup_jenkins</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <version>${version.failsafe.plugin}</version>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>cdt2-serve</id>
+                                <phase>pre-integration-test</phase>
+                                <configuration>
+                                    <target>
+                                        <echo message="********** node cdt package install flow-3pps..." />
+                                        <exec executable="${node}" dir="${basedir}/../../flow-automation/flow-3pps" spawn="false">
+                                            <arg value="${cdt-package}" />
+                                            <arg value="install" />
+                                            <arg value="--autofill" />
+                                        </exec>
+                                        <echo message="********** node cdt package install flow-automation-lib..." />
+                                        <exec executable="${node}" dir="${basedir}/../../flow-automation/flow-automation-lib" spawn="false">
+                                            <arg value="${cdt-package}" />
+                                            <arg value="install" />
+                                            <arg value="--autofill" />
+                                        </exec>
+                                        <echo message="********** node cdt package install flow-catalog..." />
+                                        <exec executable="${node}" dir="${basedir}/../../flow-automation/flow-catalog" spawn="false">
+                                            <arg value="${cdt-package}" />
+                                            <arg value="install" />
+                                            <arg value="--autofill" />
+                                        </exec>
+                                        <echo message="********** node cdt package install flow-instance-details..." />
+                                        <exec executable="${node}" dir="${basedir}/../../flow-automation/flow-instance-details" spawn="false">
+                                            <arg value="${cdt-package}" />
+                                            <arg value="install" />
+                                            <arg value="--autofill" />
+                                        </exec>
+                                        <echo message="********** node cdt package install flow-instances..." />
+                                        <exec executable="${node}" dir="${basedir}/../../flow-automation/flow-instances" spawn="false">
+                                            <arg value="${cdt-package}" />
+                                            <arg value="install" />
+                                            <arg value="--autofill" />
+                                        </exec>
+
+                                        <echo message="cdt package link flow-3pps..." />
+                                        <exec executable="${node}" dir="${basedir}/../../flow-automation/flow-instances" spawn="false">
+                                            <arg value="${cdt-package}" />
+                                            <arg value="link" />
+                                            <arg value="${basedir}/../../flow-automation/flow-3pps" />
+                                        </exec>
+                                        <echo message="cdt package link flow automation lib..." />
+                                        <exec executable="${node}" dir="${basedir}/../../flow-automation/flow-instances" spawn="false">
+                                            <arg value="${cdt-package}" />
+                                            <arg value="link" />
+                                            <arg value="${basedir}/../../flow-automation/flow-automation-lib" />
+                                        </exec>
+                                        <echo message="cdt package link flow catalog..." />
+                                        <exec executable="${node}" dir="${basedir}/../../flow-automation/flow-instances" spawn="false">
+                                            <arg value="${cdt-package}" />
+                                            <arg value="link" />
+                                            <arg value="${basedir}/../../flow-automation/flow-catalog" />
+                                        </exec>
+                                        <echo message="cdt package link flow instance details..." />
+                                        <exec executable="${node}" dir="${basedir}/../../flow-automation/flow-instances" spawn="false">
+                                            <arg value="${cdt-package}" />
+                                            <arg value="link" />
+                                            <arg value="${basedir}/../../flow-automation/flow-instance-details" />
+                                        </exec>
+
+                                        <echo message="Starting Flow Automation server..." />
+                                        <exec executable="${node}" dir="${basedir}/../../flow-automation/flow-instances" spawn="true">
+                                            <arg value="${cdt-serve}" />
+                                            <arg value="-p" />
+                                            <arg value="8585" />
+                                            <arg value="--module" />
+                                            <arg value="mockServer.js" />
+                                        </exec>
+                                    </target>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>stop-cdt2-serve</id>
+                                <phase>post-integration-test</phase>
+                                <configuration>
+                                    <target>
+                                        <echo message="killing cdt2-serve process..." />
+                                        <exec executable="bash" spawn="false">
+                                            <arg value="-c" />
+                                            <arg value="ps ax | grep -e node.*/index.js | grep -v grep | awk '{print $1}' | xargs kill -SIGTERM" />
+                                        </exec>
+                                    </target>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <build>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+                <filtering>true</filtering>
+            </testResource>
+        </testResources>
+        <plugins>
+            <plugin>
+                <!--
+                The gmavenplus plugin is used to compile Groovy code.
+                To learn more about this plugin, visit https://github.com/groovy/GMavenPlus/wiki
+                -->
+                <groupId>org.codehaus.gmavenplus</groupId>
+                <artifactId>gmavenplus-plugin</artifactId>
+                <version>1.5</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.codehaus.groovy</groupId>
+                        <artifactId>groovy-all</artifactId>
+                        <version>${groovy.version}</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>add-groovy-test-source</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>add-test-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>${basedir}/src/test/groovy</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

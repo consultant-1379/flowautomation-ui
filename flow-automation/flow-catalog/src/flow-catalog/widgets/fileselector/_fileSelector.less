@@ -1,0 +1,38 @@
+.eaFlowCatalog-wFileSelector {
+  display: inline-block;
+
+  &-textBox {
+    display: flex;
+
+    &-fileName {
+      word-break: break-all;;
+      word-wrap: break-word;
+      width: 300px;
+      padding-top: 8px;
+      color: black;
+    }
+
+    &-fileNameErrorText {
+      &_error_true {
+        display: block;
+        padding-top: 3px;
+      }
+
+      &_error_false {
+        display: none;
+      }
+    }
+  }
+
+  &-button {
+    display: inline-block;
+  }
+
+  &-inputError {
+    border-color: #F00 !important;
+  }
+
+  &-fileSelectorInput {
+    display: none;
+  }
+}

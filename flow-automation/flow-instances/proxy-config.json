@@ -1,0 +1,30 @@
+{
+    "host": "enmapache.athtem.eei.ericsson.se",
+    "port": 443,
+    "protocol": "https",
+    "headers": {
+        "UserID":"administrator",
+        "Cookie": "iPlanetDirectoryPro=S1~AQIC5wM2LY4SfczDhSwt-oXLCkhYPGcj7sUX9vDCKXejUWg.*AAJTSQACMDIAAlNLABM1NzQ0ODIzNDQ3MzY1ODgwMjA5AAJTMQACMDE.*"
+    },
+    "mappings": [
+        {
+            "source": "/flowautomation/"
+        },
+        {
+            "source": "/rest"
+        },
+        {
+            "source": "/editprofile",
+            "dest": "/oss/idm/usermanagement/users/administrator"
+        },
+        {
+            "source": "/oss"
+        },
+        {
+            "source": "/object-configuration"
+        },
+        {
+            "source": "/element-manager-services/desktop/credentials"
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+<task id="ImportFlow-MyTask">
+    <title>Import a Flow</title>
+    <taskbody>
+        <prereq>
+            <p>You must have the Flowautomation_Administrator role.</p>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>This tutorial describes the steps required to import a flow.</p>
+
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+                <li>
+                    <xref type="concept" href="#1">Select Import Flow.</xref>
+                </li>
+                <li>
+                    <xref type="concept" href="#2">Select Flow Package.</xref>
+                </li>
+            </ol>
+        </context>
+        <steps>
+            <step id="1">
+                <cmd>Select Import Flow</cmd>
+                <info>
+                    <ol>
+                        <li>Launch
+                            <xref type="concept" href="#flow-automation/flowcatalog" scope="external">Flow Catalog
+                            </xref>
+                        </li>
+                        <li>Click <b>Import Flow</b>.
+                        </li>
+                    </ol>
+                </info>
+            </step>
+            <step id="2">
+                <cmd>Select Flow Package</cmd>
+                <info>
+                    <ol>
+                        <li>Click <b>Select File</b> to select the flow package to import.
+                        </li>
+                        <li>Click <b>Import</b>.
+                        </li>
+                    </ol>
+                    <b>Note:</b>
+                    Flow Package must be in ZIP format.
+                </info>
+            </step>
+        </steps>
+        <result>
+            <p>The flow is imported to the Flow Automation application, and the <b>Flows Table</b> is updated to display
+                flow package details.
+            </p>
+        </result>
+    </taskbody>
+</task>

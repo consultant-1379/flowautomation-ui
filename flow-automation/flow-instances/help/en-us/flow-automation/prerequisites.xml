@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="MyApp-Overview">
+    <title>Prerequisites</title>
+    <conbody>
+        <section>
+            <p>The following prerequisites are required to use Flow Automation:</p>
+            <title>Required User Roles</title>
+            <p>You must have one of the following roles:
+                <ul>
+                    <li>
+                        <b>Flowautomation_Operator</b>
+                        <p>This allows you to start new flow instances and view flow instances and instance details.</p>
+                    </li>
+                    <li>
+                        <b>Flowautomation_Administrator</b>
+                        <p>This allows you to import new flows, enable or disable flows, start new flow instances and
+                            view flow instances and instance details.
+                        </p>
+                    </li>
+                </ul>
+                <b>Note:</b>
+                Refer to the <xref href="#help/app/usermanagement" scope="external">User Management Online Help</xref> for
+                details on how to create a user/role and to set a password.
+            </p>
+        </section>
+    </conbody>
+</concept>

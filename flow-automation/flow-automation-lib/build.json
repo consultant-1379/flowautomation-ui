@@ -1,0 +1,31 @@
+{
+    "parent": "$(parentJson)/library.json",
+    "defaultPhase": "package",
+    "properties": {
+        "package": "flow-automation-lib",
+        "name": "FlowAutomationLib",
+        "version": "1.0.0",
+        "skeleton": "2.3.0",
+        "skeletonType": "library"
+    },
+    "phases": {
+        "package": {
+            "depends": [
+                "clean",
+                "analyze",
+                "test",
+                "compile",
+                "compress"
+            ]
+        }
+    },
+    "dependencies": {
+        "i18n": "3.0.4",
+        "jscore": "2.0.4",
+        "widgets": "1.10.2",
+        "assets": "1.11.2",
+        "container": "1.16.1",
+        "tablelib": "0.12.2",
+        "uit": "1.0.1"
+    }
+}

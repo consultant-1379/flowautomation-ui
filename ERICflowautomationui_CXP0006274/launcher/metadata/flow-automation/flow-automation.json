@@ -1,0 +1,50 @@
+{
+  "id": "flow-automation",
+  "name": "Flow Automation",
+  "shortInfo": "Flow Automation is an application that supports the automation of basic daily tasks and complex end-to-end activities in IDUN.",
+  "acronym": "FA",
+  "path": "/#flow-automation",
+  "type": "web",
+  "version": 1,
+  "openInNewWindow": false,
+  "resources": [
+    "flowautomation"
+  ],
+  "groups": [
+    {
+      "id": "System",
+      "name": "System"
+    }
+  ],
+  "consumeActions": [
+    "networkexplorer-add-to-collection",
+    "alarmmonitor-remote-show",
+    "topologybrowser-locate-in-topology",
+    "advancedmoscripting-remote-show",
+    "nodecli-remote-show",
+    "cabinetviewer-remote-show",
+    "winfiolcli-remote-show",
+    "winfiolgui-remote-show",
+    "alarmmonitor-remote-show",
+    "elementmanager-remote-show",
+    "emcli-remote-show",
+    "emgui-remote-show",
+    "nmtoolbox-remote-show",
+    "shmcreateupgradejob-upgrade-node-software",
+    "shmcreatebackupjob-backup-node",
+    "shmnoderestartjob-restart-node",
+    "shmbackupinventory-view-backup-inventory",
+    "shmsoftwareinventory-view-software-inventory",
+    "shmlicenseinventory-view-license-inventory",
+    "shmhardwareinventory-view-hardware-inventory",
+    "topologybrowser-initiate-cm-sync",
+    "topologybrowser-edit-state",
+    "cellmanagement-view-cells",
+    "nwiecli-remote-show",
+    "nodemonitor-view-node",
+    "incidentmanagement-view-incidents",
+    "linkmanagement-list-link",
+    "linkmanagement-delete-link",
+    "generatehcreport-run-node-health-check"
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "execute": {
+    "header": "Execute",
+    "name": "Name",
+    "dialog": "Start - ",
+    "description": "Description",
+    "executeText": "Start",
+    "cancel": "Cancel",
+    "successMessagePart1": "Flow",
+    "successMessagePart2": "started successfully",
+    "failureMessage": "Unable to start flow",
+    "unauthorized": "You are not authorized to start a flow.",
+    "nameRequired": "Instance name is required",
+    "setupPhaseRequiredNote": "NOTE: The start of this flow requires an initial setup phase before it can start",
+    "validateName": {
+      "nameRequired": "Enter a flow instance name",
+      "specialCharsNotAllowed": "Use only letters (a-z, A-Z), numbers and spaces",
+      "cannotStartWithSpecial": "Flow instance name cannot start with “-“, “_“ or space",
+      "flowInstanceNameLengthExceeded": "Flow instance name cannot exceed 128 characters"
+    }
+  },
+  "errorDialogBox": {
+    "message": "MESSAGE:",
+    "viewErrorDetails": "View Error Details"
+  },
+  "flow": {
+    "ok": "OK",
+    "retry": "Retry",
+    "cancel": "Cancel"
+  },
+  "userTask": {
+    "error": "Unable to Complete User Task"
+  },
+  "report": {
+    "noAvailable": "No report available"
+  },
+  "processDefinitionDiagram": {
+    "unnamedProcess": "Unnamed process"
+  },
+  "processActivityDiagram": {
+    "unnamedProcess": "Unnamed process",
+    "started": "Started",
+    "ended": "Ended",
+    "active": "Active",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "selectActivityInstanceToDrilldown": "Select activity instance..."
+  },
+  "genericErrorMessage": "The application has encountered an unknown error. Please contact your system administrator",
+  "errorCodes": {
+    "internalFlowError": "Internal Flow Error",
+    "internalServiceError": "Internal Service Error",
+    "UNAUTHORIZED_CODE": 401,
+    "NO_SERVER_FOUND": 404,
+    "UNPROCESSABLE_ENTITY": 422,
+    "INTERNAL_SERVER_ERROR": 500,
+    "flow-0001": "The user doesn't have the required capability/role to perform the requested action.",
+    "flow-2000": "Missing flow-package field in the flow import operation",
+    "flow-2001": "Either the flow package is not a valid zip format or it's an empty zip",
+    "flow-2002": "Failed to validate the zip content. Invalid flow package",
+    "flow-2003": "flow-definition.json file is missing in the flow package",
+    "flow-2004": "Unexpected error while parsing the flow-definition.json file",
+    "flow-2005": "Import failed",
+    "flow-2006": "Invalid Flow version syntax",
+    "flow-2007": "Flow version is not allowed",
+    "flow-2008": "Unexpected error while parsing the flow resource",
+    "flow-2009": "Invalid flow-definition.json file",
+    "flow-2010": "Invalid flow package structure",
+    "flow-2011": "Execution phase missing in flow package",
+    "flow-2014": "Flow doesn't have setup phase",
+    "flow-2015": "Flow name is already in use by another flow.",
+    "flow-3000": "Flow already exists",
+    "flow-3001": "Flow doesn't exist",
+    "flow-3002": "Flow doesn't have an active version",
+    "flow-3012": "Conflict when performing operation in flow",
+    "flow-3015": "Server encountered error while connecting with DB",
+    "unknown": "Encountered an unknown server error",
+    "flow-execution-2005": "It's not possible to review the flow input at this stage. Please try again later.",
+    "flow-execution-2100": "A valid flow instance name is required and can't be null",
+    "flow-execution-2101": "The flow instance name is already in use",
+    "flow-execution-2102": "No flow found with the specified flow id",
+    "flow-execution-2105": "Task not found",
+    "flow-execution-2106": "Invalid flow input",
+    "flow-execution-2109": "Invalid file name",
+    "flow-execution-2140": "Schema not found",
+    "flow-execution-2141": "Processing Error",
+    "flow-execution-2142": "Validation Error",
+    "flow-execution-2114": "User task failed",
+    "flow-execution-2115": "The flow execution is in an invalid phase for suspension.",
+    "flow-execution-2116": "The flow cannot be executed.",
+    "flow-execution-2117": "Operation not allowed",
+    "flow-execution-2119": "Flow execution failed.",
+    "flow-execution-2143": "Invalid resource download request for the flow execution.",
+    "flow-execution-2144": "No resource available to download for the flow execution.",
+    "flow-execution-2145": "Failed to generate the flow execution resource.",
+    "flow-execution-2122": "Setup phase not successful",
+    "flow-execution-2181": "You do not have all the capabilities required to execute this flow. Do you still want to continue?",
+    "flow-execution-2108": "File attachment(s) missing in the flow input. Please make sure all the required files are included in the attachment.",
+    "flow-execution-2098": "Invalid back target for the Usertask, it can't be null",
+    "flow-execution-2099": "Failed to go back to previous Usertask."
+  },
+  "errorResponse": {
+    "accessDeniedHeader": "Access Denied",
+    "accessDeniedContent": "<p>Your role does not allow you access to this application.</p><p>Contact your System Administrator to change your access rights.</p>",
+    "noServerFoundHeader": "Server Not Found",
+    "noServerFoundContent": "<p>The requested resource cannot be found. </p><p>Please try again later.</p>",
+    "serviceDownContent": "The server encountered an internal error. Please try again later or contact your System Administrator.",
+    "unableToRetrieveDataHeader": "Unable to Retrieve Data",
+    "networkObjectNotFoundHeader": "Could not find requested object",
+    "networkObjectNotFoundContent": "We cannot find the requested object. It may have been removed or is not available at this time.",
+    "errorInFlow": "Error in flow package. Check the flow design. Error message: ",
+    "jsonValidationError": "Validation errors have been found. Please check your input(s) or talk to your administrator/flow designer."
+  },
+  "tableSettings": {
+    "header": "Table Settings",
+    "successMessage": "Table settings applied successfully.",
+    "apply": "Apply",
+    "cancel": "Cancel",
+    "selectLabel": "Select",
+    "allLabel": "All",
+    "noneLabel": "None"
+  },
+  "flowInstance": {
+    "actions": {
+      "stop": "Stop"
+    },
+    "stop": {
+      "confirmDialog": {
+        "header": "Stop Flow Instance",
+        "content": "Are you sure you want to stop this flow instance?",
+        "buttons": {
+          "stop": "Stop",
+          "cancel": "Cancel"
+        }
+      },
+      "success": "Successfully submitted the Flow Instance stop request.",
+      "errorDialog": {
+        "header": "Unable to Stop Flow Instance",
+        "buttons": {
+          "ok": "OK"
+        }
+      }
+    }
+  },
+  "resources": {
+    "notAvailable": "Requested resource not available",
+    "buttons": {
+      "ok": "OK"
+    }
+  }
+}

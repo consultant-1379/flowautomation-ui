@@ -1,0 +1,25 @@
+{
+  "i18n": {
+    "locales": [
+      "en-us"
+    ]
+  },
+  "exports": {
+    "flow-automation-lib/flow-execute/FlowExecute": "flow-automation-lib/flow-execute/FlowExecute",
+    "flow-automation-lib/services/CustomError": "flow-automation-lib/services/CustomError",
+    "flow-automation-lib/services/Notifications": "flow-automation-lib/services/Notifications",
+    "flow-automation-lib/services/ErrorHandler": "flow-automation-lib/services/ErrorHandler",
+    "flow-automation-lib/services/AuthorizationService": "flow-automation-lib/services/AuthorizationService",
+    "flow-automation-lib/services/messageUtils": "flow-automation-lib/services/messageUtils",
+    "flow-automation-lib/table-settings-button/TableSettingsButton": "flow-automation-lib/table-settings-button/TableSettingsButton",
+    "flow-automation-lib/flow-instance/flowInstanceStopAction": "flow-automation-lib/flow-instance/flowInstanceStopAction",
+    "flow-automation-lib/helper/execution": "flow-automation-lib/helper/execution",
+    "flow-automation-lib/helper/flow": "flow-automation-lib/helper/flow",
+    "flow-automation-lib/helper/utils": "flow-automation-lib/helper/utils",
+    "flow-automation-lib/helper/Loader": "flow-automation-lib/helper/Loader",
+    "flow-automation-lib/helper/promisify": "flow-automation-lib/helper/promisify",
+    "flow-automation-lib/process-definition-diagram/ProcessDefinitionDiagram": "flow-automation-lib/process-definition-diagram/ProcessDefinitionDiagram",
+    "flow-automation-lib/process-activity-diagram/ProcessActivityDiagram": "flow-automation-lib/process-activity-diagram/ProcessActivityDiagram",
+    "flow-automation-lib/services/PollingSynchronizer": "flow-automation-lib/services/PollingSynchronizer"
+  }
+}

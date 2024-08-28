@@ -1,0 +1,16 @@
+{
+  "header" : {
+    "reportTime" : "2019-08-13T08:36:38+0000",
+    "flowId" : "com.ericsson.oss.fa.flows.usertaskShowcase.i8n",
+    "flowVersion" : "1.0.11",
+    "flowName" : "Usertask Showcase with i8n",
+    "flowExecutionName" : "1217",
+    "startedBy" : "faadmin",
+    "startTime" : "2019-08-12T11:17:58+0000",
+    "endTime" : "2019-08-12T11:21:20+0000",
+    "status" : "COMPLETED"
+  },
+  "body" : {
+    "numInstances" : 0
+  }
+}

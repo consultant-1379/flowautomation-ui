@@ -1,0 +1,21 @@
+<div class="eaFlowInstanceDetails-wLabel">
+    {{#if isConfirmAndReview}}
+        <div class="eaFlowInstanceDetails-wLabel-inner eaFlowInstanceDetails-wLabel-inner-review">
+            <span class="ebLabel-text eaFlowInstanceDetails-wLabel-content-label eaFlowInstanceDetails-wLabel-content-label-review"></span>
+            <span class="ebLabel-text eb_wMargin eaFlowInstanceDetails-wLabel-content-value"></span>
+            <span class="eaFlowInstanceDetails-wLabel-content-icon">
+                <i class="ebIcon_simpleGreenTick eaFlowInstanceDetails-wLabel-content-icon-true"> </i>
+                <i class="ebIcon_close eaFlowInstanceDetails-wLabel-content-icon-false"> </i>
+            </span>
+            <a class="ebLabel-text eb_wMargin eaFlowInstanceDetails-wLabel-content-link eaFlowInstanceDetails-wLabel-content-link-review"></a>
+        </div>
+    {{else}}
+        <div class="eaFlowInstanceDetails-wLabel-inner">
+            <span class="ebLabel-text eaFlowInstanceDetails-wLabel-content-label"></span>
+            <span class="ebLabel-text eb_wMargin eaFlowInstanceDetails-wLabel-content-value"></span>
+            <a class="ebLabel-text eb_wMargin eaFlowInstanceDetails-wLabel-content-link"></a>
+            <div class="eaFlowInstanceDetails-wLabel-inner-description"></div>
+        </div>
+        <div class="eaFlowInstanceDetails-wLabel-info"></div>
+    {{/if}}
+</div>

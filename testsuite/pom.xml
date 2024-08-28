@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.ericsson.idun.poc.presentation.client.flowautomation</groupId>
+        <artifactId>flowautomation-ui</artifactId>
+        <version>1.47.12-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>flowautomation-testsuite</artifactId>
+    <packaging>pom</packaging>
+    <name>[${project.parent.artifactId}] Graphene Project</name>
+
+    <properties>
+        <arquillian.bom.version>1.4.0.Final</arquillian.bom.version>
+        <arquillian.drone.bom.version>2.5.1</arquillian.drone.bom.version>
+        <groovy.version>2.4.8</groovy.version>
+        <spock.version>0.7-groovy-2.0</spock.version>
+        <arquillian.spock.extension.version>1.0.0</arquillian.spock.extension.version>
+        <arquillian.graphene.version>2.3.2</arquillian.graphene.version>
+        <version.failsafe.plugin>2.19.1</version.failsafe.plugin>
+        <file.utils.version>2.38.2</file.utils.version>
+
+        <!-- chrome driver on jenkins -->
+        <driver.chrome.version>85.0.4183.83</driver.chrome.version>
+        <browser.chrome.config>--headless</browser.chrome.config>
+        <browser.chrome.path>/usr/bin/google-chrome</browser.chrome.path>
+
+        <!-- cdt2 setup for jenkins -->
+        <npm>/proj/ciexadm200/tools/node/node-v6.10.2-linux-x64/bin/npm</npm>
+        <node>/proj/ciexadm200/tools/node/node-v6.10.2-linux-x64/bin/node</node>
+        <cdt2-build>/proj/ciexadm200/tools/node/node-v6.10.2-linux-x64/lib/node_modules/@uisdk/cdt-build/index.js</cdt2-build>
+        <cdt-package>/proj/ciexadm200/tools/node/node-v6.10.2-linux-x64/lib/node_modules/@uisdk/cdt-package/index.js</cdt-package>
+        <cdt-serve>/proj/ciexadm200/tools/node/node-v6.10.2-linux-x64/lib/node_modules/@uisdk/cdt-serve/index.js</cdt-serve>
+        <packagesToBuild>flow-3pps,flow-automation-lib,flow-instance-details,flow-catalog,flow-instances</packagesToBuild>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.jboss.arquillian</groupId>
+                <artifactId>arquillian-bom</artifactId>
+                <version>${arquillian.bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.arquillian.extension</groupId>
+                <artifactId>arquillian-drone-bom</artifactId>
+                <version>${arquillian.drone.bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>file-utils</artifactId>
+            <version>${file.utils.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.arquillian.graphene</groupId>
+            <artifactId>graphene-webdriver</artifactId>
+            <version>${arquillian.graphene.version}</version>
+            <type>pom</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.arquillian.spock</groupId>
+            <artifactId>arquillian-spock-standalone</artifactId>
+            <version>${arquillian.spock.extension.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.arquillian.spock</groupId>
+            <artifactId>arquillian-spock-core</artifactId>
+            <version>${arquillian.spock.extension.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.arquillian.spock</groupId>
+            <artifactId>arquillian-spock-container</artifactId>
+            <version>${arquillian.spock.extension.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.spockframework</groupId>
+            <artifactId>spock-core</artifactId>
+            <version>${spock.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>${groovy.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.arquillian.core</groupId>
+            <artifactId>arquillian-core-impl-base</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.arquillian.test</groupId>
+            <artifactId>arquillian-test-impl-base</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.3</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>${version.failsafe.plugin}</version>
+                    <configuration>
+                        <systemPropertyVariables>
+                            <skipIntegration />
+                        </systemPropertyVariables>
+                        <includes>
+                            <include>**/*Spec.*</include>
+                        </includes>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>integration-test</goal>
+                                <goal>verify</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <modules>
+        <module>usat</module>
+    </modules>
+
+</project>

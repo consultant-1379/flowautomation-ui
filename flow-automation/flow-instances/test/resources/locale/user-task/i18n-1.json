@@ -1,0 +1,9 @@
+{
+  "flowId": "com.ericsson.oss.fa.flows.usertaskShowcase.i8n",
+  "flowVersion": "1.0.6",
+  "userTaskId": "117836f6-b8f5-11e9-bb9a-0242ac1d0005",
+  "userTaskDefinitionKey": "FAInternal-optionally-get-file-based-input",
+  "userTaskName": "Choose Setup",
+  "locale": "zh-TW",
+  "dictionary": "{\"setupType\":{\"name\":\"选择最适合您需求的安装类型\",\"interactive\":{\"name\":\"互动\",\"description\":\"通过用户任务输入参数\"},\"fileInput\":{\"name\":\"文件输入\",\"description\":\"使用文件输入参数\"}},\"name\":\"设置类型\",\"description\":\"选择安装用户任务架构\",\"title\":\"选择安装用户任务架构\"}"
+}

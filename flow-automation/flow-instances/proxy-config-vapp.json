@@ -1,0 +1,48 @@
+{
+  "host": "enmapache.athtem.eei.ericsson.se",
+  "port": 443,
+  "protocol": "https",
+  "headers": {
+    "UserID": "administrator",
+    "Cookie": "iPlanetDirectoryPro=S1~AQIC5wM2LY4SfcxP26BsdbHgOnUriD5kyWpBODIwaLuAH9M.*AAJTSQACMDIAAlNLABQtODk3MDQ5OTA0NzAwMjE1OTUzNAACUzEAAjAx*"
+  },
+  "mappings": [
+    {
+      "source": "/flowautomation"
+    },
+    {
+      "source": "/editprofile",
+      "dest": "/oss/idm/usermanagement/users/administrator"
+    },
+    {
+      "source": "/fa-engine-rest/engine/default/history/activity-instance"
+    },
+    {
+      "source": "/fa-engine-rest"
+    },
+    {
+      "source": "/fa-engine-rest/engine/default/history/variable-instance"
+    },
+    {
+      "source": "/oss"
+    },
+    {
+      "source": "/persistentObject"
+    },
+    {
+      "source": "/object-configuration"
+    },
+    {
+      "source": "/rest"
+    },
+    {
+      "source": "/persistentObject/network/"
+    },
+    {
+      "source": "/managedObjects"
+    },
+    {
+      "source": "/topologyCollections"
+    }
+  ]
+}

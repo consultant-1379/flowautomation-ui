@@ -1,0 +1,288 @@
+{
+  "restart": {
+    "header": "Restart",
+    "content": "Are you sure you want to restart this flow instance?",
+    "button": "Restart"
+  },
+  "cancel": {
+    "header": "Discard Setup",
+    "content": "Are you sure you want to discard the setup of this flow instance?",
+    "button": "Discard"
+  },
+  "informUserOfSubNetwork": {
+    "header": "The selection contains at least one SubNetwork: ",
+    "content": "Please make another selection",
+    "button": "OK"
+  },
+  "confirmation": {
+    "header": "Confirm Execution",
+    "content": "Are you sure you want to execute this flow?"
+  },
+  "links": {
+    "view": "View",
+    "download": "Download"
+  },
+  "genericValues": {
+    "noValueSupplied": "N/A"
+  },
+  "STARTED": "Started",
+  "SETTING_UP": "Setup",
+  "CONFIRM_EXECUTE": "Setup",
+  "EXECUTING": "Executing",
+  "INCIDENT": "Incident",
+  "COMPLETED": "Executed",
+  "CANCELLED": "Cancelled",
+  "SUSPENDED": "Stopped",
+  "STOP": "Stopping",
+  "STOPPING": "Stopping",
+  "STOPPED": "Stopped",
+  "FAILED": "Failed",
+  "FAILED_SETUP": "Setup Failed",
+  "FAILED_EXECUTE": "Execute Failed",
+  "notApplicable": "N/A",
+  "task": "Task",
+  "userTaskForm": "User Task Form",
+  "userTasks": "User Tasks",
+  "loaderMessage": "Waiting on Response from the Server",
+  "restartLoaderMessage": "Waiting on Instance to Restart",
+  "cancelLoaderMessage": "Waiting on Instance to Cancel",
+  "userTasksDetails": "User Task Details",
+  "restCallErrors": {
+    "internalServerError": "Internal Server Error",
+    "contactSystemAdmin": "Please contact the system administrator"
+  },
+  "tabs": {
+    "report": "Report",
+    "userTasks": "User Tasks",
+    "setupData": "Setup",
+    "execution": "Execution",
+    "errors": "Errors",
+    "activities": "Activities",
+    "processDiagram": "Process Diagram",
+    "events": "Events"
+  },
+  "header": "User Tasks",
+  "setupTaskHeaderText": "Task",
+  "inputs": {
+    "file": {
+      "selectFileCaption": "Choose File",
+      "requiredMessage": " File is required",
+      "noFileChosenMessage": "No File Chosen"
+    }
+  },
+  "actions": {
+    "ok": "OK",
+    "continue": "Continue",
+    "back": "Modify Previous Task",
+    "preview": "Check Previous Task Inputs",
+    "restart": "Restart",
+    "discard": "Discard Setup",
+    "execute": "Execute",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "export": "Export...",
+    "downloadFlowInput": "Setup Configuration",
+    "downloadAll": " Report",
+    "submitmultipletasks": "Submit to multiple tasks"
+  },
+  "errors": {
+    "invalidEmailAddress": "The provided email address is invalid",
+    "numValidationError": " validation error(s), please fix these before proceeding",
+    "requiredField": "This input is required with a minimum length of ",
+    "requiredFieldNeedsToBeGreaterThanOne": "This input is required.",
+    "minimumLength": "This input must have a minimum length of ",
+    "maximumLength": "This input must have a maximum length of ",
+    "pattern": "Must match the pattern : ",
+    "characters": " characters.",
+    "validationErrorHeader": "Validation Error",
+    "validationErrorMessage": "There are validation errors, fix before proceeding.",
+    "notFoundFlowId": {
+      "title": "Not Found",
+      "body": "Flow does not exist."
+    },
+    "validationHeader": "Flow Validation Error",
+    "selectTableValidation": {
+      "select": "Please select a valid number of entries. ",
+      "minimum": "Minimum: ",
+      "maximum": "Maximum: ",
+      "few": "Too few selected. ",
+      "many": "Too many selected. "
+    },
+    "unprocessableEntity": {
+      "title": "Unprocessable Entity",
+      "body": "Entity problems."
+    },
+    "badRequest": {
+      "title": "Bad Request",
+      "body": "Bad request, server didn't process the request."
+    },
+    "forbidden": {
+      "title": "Access Denied",
+      "body": "Your role does not allow you to perform this operation. Contact your Security Administrator to change your access rights."
+    },
+    "networkObjectNotFound": {
+      "title": "Could not find requested object",
+      "body": "We cannot find the requested object. It may have been removed or is not available at this time."
+    },
+    "unknownServerError": {
+      "title": "Unknown server error",
+      "body": "There was an unknown server error",
+      "detail": ""
+    },
+    "applicationErrorHeader": "Flow Automation Error",
+    "missingFlowIdOrExecutionNameInURL": "Flow id or Execution Name is missing in the URL. Please close the browser or go back."
+  },
+  "userTask": {
+    "noAvailable": "No User Tasks",
+    "executionSummary": {
+      "flowVersion": "Version:",
+      "flowName": "Flow:",
+      "state": "State",
+      "startTime": "Start Time",
+      "endTime": "End Time",
+      "startedBy": "Started By",
+      "summaryReport": "Summary Report"
+    },
+    "multiSubmit": {
+      "header": "Submit to Multiple Tasks",
+      "headerMessage": "Select all the tasks you wish to apply this answer to.",
+      "totalUsertasks": "User Tasks",
+      "selectedUserTasks": "Selected",
+      "buttons": {
+        "selectAll": "Select All",
+        "selectNone": "Select None",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "close": "Close"
+      },
+      "footer": {
+        "note": "note",
+        "message": "Depending upon the user task the choice may not be applicable to all tasks.",
+        "errorNotification": "Some or All of the selected user tasks failed to complete and will be available in the user tasks panel."
+      }
+    },
+    "backNavigation": {
+      "header": "Confirm Navigation",
+      "content": "The changes you made on this user task will be lost. Are you sure you want to navigate away from this task?",
+      "rememberDecision": "Don’t show this message again.",
+      "confirm": "Leave this task",
+      "cancel": "Stay on this task"
+    },
+    "previewHeader": "Previous Task Inputs"
+  },
+  "report": {
+    "noAvailable": "There is no report associated with the selected options"
+  },
+  "processDiagram": {
+    "activityButtonName": "Activity",
+    "definitionButtonName": "Definition"
+  },
+  "events": {
+    "filter": {
+      "selected": "Filters applied",
+      "clear": "clear",
+      "header": "Filter",
+      "apply": "Apply",
+      "cancel": "Cancel",
+      "severity": "Event Type",
+      "placeholder": {
+        "resource": "Filter by Resource",
+        "message": "Filter by Message Synopsis"
+      }
+    },
+    "lastRefreshed": "Last refreshed",
+    "now": "now",
+    "hoursAgo": " hours ago",
+    "minutesAgo": " minutes ago",
+    "secondsAgo": " seconds ago",
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "type": "Type",
+    "time": "Time",
+    "target": "Resource",
+    "msgSynopsis": "Message Synopsis",
+    "header": "Events",
+    "eventDetails": {
+      "header": "Event Details",
+      "time": "Time",
+      "synopsis": "Synopsis",
+      "details": "Details",
+      "target": "Resource"
+    },
+    "severities": {
+      "error": "ERROR",
+      "info": "INFO",
+      "warn": "WARN"
+    },
+    "pageSizeText": "Events",
+    "defaultFilterText": "Filter By Resource",
+    "noEventsMessage": "No Events found"
+  },
+  "topology": {
+    "accordion": "Ungrouped Objects"
+  },
+  "collections": {
+    "collectionLabel": " - Collection",
+    "header": "Network Elements",
+    "emptyCollectionMessage": "Empty collection(s) cannot be added: "
+  },
+  "savedSearches": {
+    "savedSearchLabel": " - Saved Search",
+    "header": "Network Elements",
+    "emptySavedSearchMessage": "Empty saved Search(es) cannot be added: "
+  },
+  "filter": {
+    "defaultColumn": "All",
+    "refineResults": "Refine Results",
+    "apply": "Apply"
+  },
+  "remove": "Remove Collection",
+  "removeAll": "Remove Ungrouped Objects",
+  "removeOne": "Remove Object",
+  "flyOut": {
+    "button": "View User Task"
+  },
+  "reviewConfirmDialog": {
+    "link": "View",
+    "title": "Network Selection",
+    "networkHeader": "Network Elements",
+    "collectionHeader": "Collection Names",
+    "savedSearchNames": "Saved Search Names",
+    "content": "To make Network Selection modification you will need to restart the Setup Tasks.",
+    "name": "Name",
+    "close": "Close"
+  },
+  "internal": {
+    "reviewAndConfirm": {
+      "name": "Review and Confirm Execute"
+    },
+    "chooseSetup": {
+      "title": "Choose Setup usertask schema",
+      "description": "Choose Setup usertask schema",
+      "name": "Choose Setup",
+      "setupType": {
+        "name": "Choose the setup type that best suits your needs",
+        "interactive": {
+          "name": "Interactive",
+          "description": "Input parameters through user tasks"
+        },
+        "fileInput": {
+          "name": "File Input",
+          "description": "Input parameters using a file"
+        }
+      }
+    }
+  },
+  "table": {
+    "selectedValue": "Selected Items: ",
+    "buttonCaption": "Select Items"
+  },
+  "showInfo": "Show Info",
+  "setupData": {
+    "button": {
+      "expandAll": "Expand All",
+      "collapseAll": "Collapse All"
+    },
+    "emptyMessage": "There is no flow input data available for review."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "host": "localhost",
+  "port": 8080,
+  "protocol": "http",
+  "headers": {
+    "UserID": "faadmin"
+  },
+  "mappings": [
+    {
+      "source": "/flowautomation/*"
+    },
+    {
+      "source": "/fa-engine-rest/*"
+    }
+  ]
+}

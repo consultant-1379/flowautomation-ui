@@ -1,0 +1,130 @@
+{
+  "catalog": "View Flow Catalog",
+  "instances": "Instances",
+  "flows": "Flows",
+  "flowInstances": "Flow Instances",
+  "myFlowInstances": "My Flow Instances",
+  "STARTED": "Started",
+  "SETTING_UP": "Setup",
+  "CONFIRM_EXECUTE": "Setup",
+  "EXECUTING": "Executing",
+  "INCIDENT": "Incident",
+  "COMPLETED": "Executed",
+  "CANCELLED": "Cancelled",
+  "SUSPENDED": "Stopped",
+  "STOP": "Stopping",
+  "STOPPING": "Stopping",
+  "STOPPED": "Stopped",
+  "FAILED": "Failed",
+  "FAILED_SETUP": "Setup Failed",
+  "FAILED_EXECUTE": "Execute Failed",
+  "statisticsHeaders": {
+    "userTasks": "User Tasks",
+    "executing": "Executing",
+    "executed": "Executed",
+    "setUp": "Setup",
+    "stopped": "Stopped",
+    "failed": "Failed",
+    "summary": "Summary"
+  },
+  "instanceTable": {
+    "name": "Name",
+    "flow": "Flow",
+    "userTasks": "User Tasks",
+    "state": "State",
+    "summaryReport": "Summary Report",
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "duration": "Duration",
+    "startedBy": "Started By",
+    "flowVersion": "Flow Version"
+  },
+  "flowWarnings": {
+    "noFlows": "There are no flows to display"
+  },
+  "instanceWarnings": {
+    "noInstances": "There are no instances to display",
+    "noInstancesForFlow": "There are no instances associated with the selected options"
+  },
+  "tableSettings": {
+    "header": "Table Settings",
+    "successMessage": "Table settings applied successfully.",
+    "apply": "Apply",
+    "cancel": "Cancel",
+    "selectLabel": "Select",
+    "allLabel": "All",
+    "noneLabel": "None"
+  },
+  "restCallErrors": {
+    "internalServerError": "Internal Server Error",
+    "contactSystemAdmin": "Please contact the system administrator"
+  },
+  "errorCodes": {
+    "flow-0001": "The user doesn't have the required capability/role to perform the requested action.",
+    "flow-2000": "Missing flow-package field in the flow import operation",
+    "flow-2001": "Either the flow package is not a valid zip format or it's an empty zip",
+    "flow-2002": "Failed to validate the zip content. Invalid flow package",
+    "flow-2003": "flow-definition.json file is missing in the flow package",
+    "flow-2004": "Unexpected error while parsing the flow-definition.json file",
+    "flow-2005": "Import failed",
+    "flow-2006": "Invalid Flow version syntax",
+    "flow-2007": "Flow version is not allowed",
+    "flow-2008": "Unexpected error while parsing the flow resource",
+    "flow-2009": "Invalid flow-definition.json file",
+    "flow-2010": "Invalid flow package structure",
+    "flow-2011": "Execution phase missing in flow package",
+    "flow-3000": "Flow already exists",
+    "flow-3001": "Flow doesn’t exist",
+    "flow-3002": "Flow doesn't have an active version",
+    "unknown": "Encountered an unknown error while importing flow",
+    "flow-3015": "Server encountered error while connecting with DB",
+    "flow-execution-2100": "A valid flow instance name is required and can't be null",
+    "flow-execution-2101": "The flow instance name is already in use",
+    "flow-execution-2102": "No flow found with the specified flow id",
+    "flow-execution-2181": "You do not have all the capabilities required to execute this flow. Do you still want to continue?"
+  },
+  "execute": {
+    "name": "Name",
+    "dialog": "Start: ",
+    "description": "Description",
+    "executeText": "Start",
+    "cancel": "Cancel",
+    "flowContinueButtonText": "Continue",
+    "flowExecuteButtonText": "Execute",
+    "successMessagePart1": "Flow",
+    "successMessagePart2": "started successfully",
+    "failureMessage": "Oops! Something went wrong starting an instance of flow",
+    "failedToRetrieveInstance": "An instance of the flow has been started successfully, but failed to retrieve the instance. Please contact the administrator",
+    "confirmExecutionHeader": "Confirm Execution",
+    "confirmExecutionContent": "Are you surely want to execute this flow?",
+    "unauthorized": "You are not authorized to start a flow.",
+    "nameRequired": "Instance name is required",
+    "validateName": {
+      "nameRequired": "Enter a flow instance name",
+      "specialCharsNotAllowed": "Use only letters (a-z, A-Z), numbers and spaces",
+      "cannotStartWithSpecial": "Flow instance name cannot start with “-“, “_“ or space",
+      "flowInstanceNameLengthExceeded": "Flow instance name cannot exceed 128 characters"
+    }
+  },
+  "actions": {
+    "flowInstanceDetails": "View Instance Details",
+    "discard": {
+      "title": "Discard Setup",
+      "header": "Discard Setup",
+      "content": "Are you sure you want to discard the setup of this flow instance?",
+      "confirm": "Discard"
+    },
+    "delete": {
+      "title":  "Delete Instance",
+      "header": "Confirm Delete Instance",
+      "content": "Deleting an instance means you won't be able to review the result or troubleshoot the flow further. Are you sure you want to proceed?",
+      "confirm": "Delete Instance",
+      "cancel": "Cancel",
+      "errorDialog": {
+        "ok": "OK",
+        "header": "Unable to Delete Flow Instance"
+      },
+      "success": "Successfully deleted the Flow Instance."
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.eaFlowInstanceDetails-wEventTable {
+  &-loader {
+    height: 150px;
+  }
+
+  &-table {
+    height: 370px;
+  }
+
+  &-refresh {
+    float: right;
+    margin-right: 5px;
+    margin-top: 0.5px;
+
+    &-title {
+      float: left;
+      padding: 5px;
+      display: inline-block;
+      font-size: 1.2rem;
+      color: grey;
+      vertical-align: middle;
+    }
+
+    &-refreshedTime {
+      float: left;
+      padding: 5px 5px 5px 0;
+      display: inline-block;
+      font-size: 1.2rem;
+      color: grey;
+      vertical-align: middle;
+    }
+
+    &-button {
+      float: left;
+    }
+
+  }
+
+  &-flyOut {
+    float: right;
+    margin-top: 0.5px;
+    margin-right: 1px;
+  }
+
+  &-startDateTime {
+    float: right;
+    margin-right: 15px;
+    margin-bottom: 5px;
+  }
+
+  &-endDateTime {
+    float: right;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  &-severities {
+    float: right;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  &-header {
+    margin-bottom: 10px;
+    text-align: right;
+    border-bottom: solid 1px black;
+
+    &-section {
+      float: left;
+
+      &-title {
+        display: inline;
+        border-bottom: none;
+
+        &-selected-label {
+          &_hidden {
+            display: none;
+          }
+        }
+
+        &-separator {
+          border-left: 1px solid #ccc;
+          margin-left: 6px;
+          margin-right: 10px;
+          height: 2.4rem;
+
+          &_hidden {
+            display: none;
+          }
+        }
+
+        &-clearSelection {
+          display: inline;
+
+          &-separator {
+            &_hidden {
+              display: none;
+            }
+          }
+
+          &-link {
+            cursor: pointer;
+            font-size: 12px;
+
+            &_hidden {
+              display: none;
+            }
+          }
+        }
+
+        &-count {
+          display: inline;
+          font-size: 12px;
+
+          &:after {
+            content: ")"
+          }
+
+          &:before {
+            content: "("
+          }
+        }
+      }
+    }
+
+    &-clear {
+      clear: both;
+    }
+  }
+}

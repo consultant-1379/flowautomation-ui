@@ -1,0 +1,9 @@
+{
+  "flowId": "com.ericsson.oss.fa.flows.usertaskShowcase.i8n",
+  "flowVersion": "1.0.6",
+  "userTaskId": "d12cdd9a-b8f4-11e9-bb9a-0242ac1d0005",
+  "userTaskDefinitionKey": "grouping-and-nesting",
+  "userTaskName": "Grouping And Nesting",
+  "locale": "zh-TW",
+  "dictionary": "{\"name\":\"分組和嵌套\",\"groupWithTextInputs\":{\"name\":\"組與文本輸入\",\"textInput1\":{\"name\":\"文字輸入1\"},\"textInput2\":{\"name\":\"文字輸入2\"}},\"groupWithCheckboxes\":{\"name\":\"帶複選框的組\",\"checkbox1\":{\"name\":\"複選框1\"},\"checkbox2\":{\"name\":\"複選框2\"},\"checkbox3\":{\"name\":\"複選框3\"}},\"groupWithMultipleLevels\":{\"name\":\"具有多個級別的組\",\"level2Group\":{\"name\":\"2級組\",\"level3GroupWithCheckboxes\":{\"name\":\"\\n3級組與復選框\",\"checkbox1\":{\"name\":\"嵌套的复选框1\"},\"checkbox2\":{\"name\":\"嵌套的复选框2\"}}}}}"
+}

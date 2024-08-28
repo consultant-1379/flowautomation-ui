@@ -1,0 +1,118 @@
+.eaFlowInstanceDetails-wUserTaskMultiSubmit {
+  width: 600px;
+  height: 300px;
+  overflow: hidden;
+
+  &-top {
+    padding-bottom: 15px;
+    border-bottom: #e6e6e6 solid 1px;
+
+    &-message {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    &-selection {
+
+      &-summary {
+        display: inline-block;
+
+        &-usertasks {
+          float: left;
+
+          &-title {
+            padding-bottom: 1px;
+            padding-right: 3px;
+            max-width: 186px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            float: left;
+            white-space: nowrap;
+
+            &-text {
+              border-bottom: none;
+              display: inline;
+            }
+          }
+
+          &-count {
+            display: inline;
+            font-size: 18px;
+            float: left;
+            margin: 0;
+
+            &:after {
+              content: ")"
+            }
+
+            &:before {
+              content: "("
+            }
+          }
+        }
+
+        &-hyphen {
+          float: left;
+          font-size: 20px;
+          margin: 3px 5px;
+        }
+
+        &-selected {
+          padding-top: 1px;
+          display: inline-block;
+
+          &-title {
+            font-size: 1.5rem;
+            border-bottom: none;
+            display: inline;
+          }
+
+          &-count {
+            font-size: 1.5rem;
+            display: inline;
+
+            &:after {
+              content: ")"
+            }
+
+            &:before {
+              content: "("
+            }
+          }
+        }
+
+      }
+
+      &-buttons {
+        display: inline-block;
+        float: right;
+
+        &-selectAll {
+          display: inline-block;
+        }
+
+        &-selectNone {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  &-usertasks {
+    height: 125px;
+    overflow-y: auto;
+  }
+
+  &-information {
+    margin-top: 15px;
+
+    &-message {
+      font-size: 1.5rem;
+
+      &-note {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+  }
+}

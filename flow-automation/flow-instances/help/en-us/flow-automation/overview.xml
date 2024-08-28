@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Overview">
+    <title>Overview</title>
+    <conbody>
+        <section>
+            <title>High Level Overview</title>
+            <p>Flow Automation supports the automation of basic daily tasks, and complex end-to-end activities in IDUN.
+                Flow Automation is used to do the following:
+            </p>
+            <p>
+
+            </p>
+            <p>
+                <ul>
+                    <li>
+                        <p>
+                            Provides an execution environment for predefined flows.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Explore a list of available flows and view summary information.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Enable and disable a flow.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            List and sort active and historic flow instances.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            View details of a specific flow instance.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Start a new flow instance.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Interact with an active execution.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            View and export a report from a specific flow instance.
+                        </p>
+                    </li>
+                </ul>
+            </p>
+        </section>
+        <section id="setupPhaseLimitations">
+            <title>Setup Phase Limitations</title>
+            <p>The flows can enable the ability to go back in the setup phase user tasks. The flow automation
+                application takes care of retaining the previously submitted data for all the widgets in a user task
+                except for Scoping Panel and in that case the user is required to provide the data
+                again.
+            </p>
+        </section>
+    </conbody>
+</concept>

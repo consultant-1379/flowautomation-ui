@@ -1,0 +1,55 @@
+.eaFlowInstanceDetails-wFileSelector {
+  display: inherit;
+  &-inner {
+    padding: 5px 0;
+  }
+  &-textBox {
+    display: inline-block;
+    &-fileName {
+      cursor: default;
+      margin-left: 5px;
+    }
+
+    &-fileNameErrorText {
+      &_error_true {
+        display: block;
+        margin-top: 3px;
+      }
+      &_error_false {
+        display: none;
+      }
+    }
+  }
+  &-status{
+    display: none;
+  }
+  &-remove-file{
+    display: none;
+    cursor: pointer;
+  }
+  &-button {
+    display: inline-block;
+  }
+  &-inputError {
+    border-color: #F00 !important;
+  }
+  &-fileSelectorInput {
+    display: none;
+  }
+  &-description {
+    display: block;
+    padding-bottom: 5px;
+  }
+
+  &-content {
+    float: left;
+    &-name {
+      text-align: left;
+      padding-top: 5px;
+    }
+    &-description {
+      text-align: left;
+      padding-top: 5px;
+    }
+  }
+}
